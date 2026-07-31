@@ -1,0 +1,12 @@
+{
+  "_id": "6a6d0430ffe17ba0d7e32b4e",
+  "announcementText": "⚡ Free shipping on orders over $50 | COD Nationwide",
+  "shippingFee": 5,
+  "freeShippingThreshold": 50,
+  "vatRate": 0,
+  "contactPhone": "+92 300 1234567",
+  "contactEmail": "support@gizmogrid.com",
+  "address": "GizmoGrid HQ, Lahore, Pakistan",
+  "createdAt": "2026-07-31T20:23:12.152Z",
+  "updatedAt": "2026-07-31T20:23:12.152Z"
+}

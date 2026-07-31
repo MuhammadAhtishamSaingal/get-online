@@ -1,0 +1,11 @@
+[
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b4d",
+    "email": "admin@gizmogrid.com",
+    "passwordHash": "$2b$10$ZOZBb9HHrl1XjEfq.9ldCuPR0uyz1QKUmErfHkdfqsLHobSKX8uvG",
+    "name": "Store Administrator",
+    "role": "superadmin",
+    "createdAt": "2026-07-31T20:23:12.152Z",
+    "updatedAt": "2026-07-31T20:23:12.152Z"
+  }
+]

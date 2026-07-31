@@ -1,0 +1,162 @@
+[
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b39",
+    "name": "Mobile Accessories",
+    "slug": "mobile-accessories",
+    "order": 1,
+    "createdAt": "2026-07-31T20:23:12.066Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b3a",
+    "name": "Computer Accessories",
+    "slug": "computer-accessories",
+    "order": 2,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b3b",
+    "name": "Laptop Accessories",
+    "slug": "laptop-accessories",
+    "order": 3,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b3c",
+    "name": "Desktop Accessories",
+    "slug": "desktop-accessories",
+    "order": 4,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b3d",
+    "name": "Chargers",
+    "slug": "chargers",
+    "order": 5,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b3e",
+    "name": "Charging Cables",
+    "slug": "charging-cables",
+    "order": 6,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b3f",
+    "name": "Power Banks",
+    "slug": "power-banks",
+    "order": 7,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b40",
+    "name": "Earbuds",
+    "slug": "earbuds",
+    "order": 8,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b41",
+    "name": "Headphones",
+    "slug": "headphones",
+    "order": 9,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b42",
+    "name": "Smartwatches",
+    "slug": "smartwatches",
+    "order": 10,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b43",
+    "name": "Phone Cases",
+    "slug": "phone-cases",
+    "order": 11,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b44",
+    "name": "Screen Protectors",
+    "slug": "screen-protectors",
+    "order": 12,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b45",
+    "name": "USB Hubs",
+    "slug": "usb-hubs",
+    "order": 13,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b46",
+    "name": "Keyboards",
+    "slug": "keyboards",
+    "order": 14,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b47",
+    "name": "Mice",
+    "slug": "mice",
+    "order": 15,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b48",
+    "name": "Gaming Accessories",
+    "slug": "gaming-accessories",
+    "order": 16,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b49",
+    "name": "Car Accessories",
+    "slug": "car-accessories",
+    "order": 17,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b4a",
+    "name": "Storage Devices",
+    "slug": "storage-devices",
+    "order": 18,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b4b",
+    "name": "Smart Gadgets",
+    "slug": "smart-gadgets",
+    "order": 19,
+    "createdAt": "2026-07-31T20:23:12.067Z",
+    "updatedAt": "2026-07-31T20:23:12.067Z"
+  },
+  {
+    "_id": "6a6d0430ffe17ba0d7e32b4c",
+    "name": "Everyday Essentials",
+    "slug": "everyday-essentials",
+    "order": 20,
+    "createdAt": "2026-07-31T20:23:12.068Z",
+    "updatedAt": "2026-07-31T20:23:12.068Z"
+  }
+]
