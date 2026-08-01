@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 // Cloudinary optimization helper
@@ -34,107 +33,19 @@ export function ParallaxFeature({
   ctaText,
   ctaLink,
 }: ParallaxFeatureProps) {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const imageRef = React.useRef<HTMLDivElement>(null);
-  const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(false);
-
-  // Detect prefers-reduced-motion
-  React.useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const initialMatch = mediaQuery.matches;
-    
-    // Set state asynchronously to avoid synchronous cascading renders linter error
-    const timeoutId = setTimeout(() => {
-      setPrefersReducedMotion(initialMatch);
-    }, 0);
-
-    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
-    mediaQuery.addEventListener("change", handler);
-    return () => {
-      clearTimeout(timeoutId);
-      mediaQuery.removeEventListener("change", handler);
-    };
-  }, []);
-
-  // Parallax scroll logic
-  React.useEffect(() => {
-    const container = containerRef.current;
-    const image = imageRef.current;
-    if (!container || !image || prefersReducedMotion) {
-      return;
-    }
-
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateParallax();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    const updateParallax = () => {
-      // Disable parallax on mobile viewports (< 768px) for performance
-      if (window.innerWidth < 768) {
-        image.style.transform = "none";
-        return;
-      }
-
-      const rect = container.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Don't calculate if section is off-screen
-      if (rect.bottom < 0 || rect.top > windowHeight) {
-        return;
-      }
-
-      const viewportCenter = windowHeight / 2;
-      const elementCenter = rect.top + rect.height / 2;
-      const distance = elementCenter - viewportCenter;
-
-      const factor = 0.12; // parallax factor
-      const yOffset = distance * factor;
-
-      // Keep within bounds of the vertical bleed
-      const maxOffset = 80;
-      const clampedOffset = Math.max(-maxOffset, Math.min(maxOffset, yOffset));
-
-      image.style.transform = `translate3d(0, ${clampedOffset}px, 0)`;
-    };
-
-    updateParallax();
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
-  }, [prefersReducedMotion]);
+  const optimizedUrl = getOptimizedImageUrl(backgroundImage, 1920, 1200);
 
   return (
     <section
-      ref={containerRef}
       className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] bg-neutral-900 overflow-hidden flex items-center justify-center"
     >
-      {/* Background Image Container with vertical bleed */}
+      {/* Background Image Container using CSS parallax background-attachment */}
       <div
-        ref={imageRef}
-        className="absolute left-0 right-0 top-[-100px] h-[calc(100%+200px)] w-full will-change-transform"
+        className="absolute inset-0 w-full h-full bg-scroll lg:bg-fixed bg-center bg-no-repeat bg-cover transition-all duration-300 motion-reduce:bg-scroll"
+        style={{ backgroundImage: `url('${optimizedUrl}')` }}
       >
-        <Image
-          src={getOptimizedImageUrl(backgroundImage, 1920, 1200)}
-          alt={headline}
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/45" />
       </div>
 
       {/* Centered Glassmorphism Card */}
@@ -158,3 +69,4 @@ export function ParallaxFeature({
     </section>
   );
 }
+
