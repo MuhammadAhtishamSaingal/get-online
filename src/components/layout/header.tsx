@@ -47,20 +47,20 @@ function MegaMenuCard({ product, idx, onClick }: { product: any; idx: number; on
     <Link
       href={`/products/${product.slug}`}
       onClick={onClick}
-      className="w-[210px] bg-white border border-neutral-200/60 rounded-custom-xl p-4 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 cursor-pointer flex-shrink-0 flex flex-col items-center"
+      className="w-[260px] bg-white border border-neutral-200/60 rounded-custom-xl p-4 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 cursor-pointer flex-shrink-0 flex flex-col items-center"
       style={{
-        animation: "slideUpFade 0.4s ease-out forwards",
-        animationDelay: `${idx * 40}ms`,
+        animation: "slideLeftFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        animationDelay: `${idx * 60}ms`,
         opacity: 0,
       }}
     >
-      <div className="w-[180px] h-[180px] relative bg-neutral-50 rounded-custom-lg overflow-hidden flex items-center justify-center mb-3">
+      <div className="w-[230px] h-[230px] relative bg-neutral-50 rounded-custom-lg overflow-hidden flex items-center justify-center mb-3">
         <Image
           src={imgSrc}
           alt={product.name}
           fill
           className="object-contain p-2 hover:scale-105 transition-transform duration-500"
-          sizes="180px"
+          sizes="230px"
           onError={() => setImgSrc("/images/gan-charger.png")}
         />
       </div>
@@ -202,7 +202,7 @@ export function Header() {
 
   const scrollCarousel = (direction: "left" | "right") => {
     if (sliderRef.current) {
-      const scrollAmount = 440; // Scrolled slightly larger for bigger cards
+      const scrollAmount = 560; // Scrolled exactly 2 wide cards (260px each + gap-5)
       sliderRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -255,6 +255,16 @@ export function Header() {
         .scrollbar-none {
           -ms-overflow-style: none;
           scrollbar-width: none;
+        }
+        @keyframes slideLeftFade {
+          from {
+            opacity: 0;
+            transform: translateX(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
         @keyframes slideUpFade {
           from {
