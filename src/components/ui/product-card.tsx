@@ -96,6 +96,31 @@ export function ProductCard({ product }: ProductCardProps) {
     }, 500);
   };
 
+  const handleBuyNow = () => {
+    if (currentStock <= 0) {
+      showToast("Sorry, this variant is currently out of stock.", "error");
+      return;
+    }
+
+    addItem({
+      productId: product._id,
+      name: product.name,
+      slug: product.slug,
+      image: product.images?.[0]?.url || "/images/gan-charger.png",
+      price: currentPrice,
+      sku: currentSku,
+      variantName: activeVariant ? activeVariant.name : undefined,
+      variantColor: activeVariant ? activeVariant.color : undefined,
+      maxStock: currentStock,
+      quantity: quantity,
+    });
+
+    showToast("Redirecting to checkout...", "success");
+    setTimeout(() => {
+      window.location.href = "/checkout";
+    }, 300);
+  };
+
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-custom-xl border border-neutral-100 bg-white shadow-sm product-card-hover">
       {/* Badge Tags */}
@@ -135,10 +160,6 @@ export function ProductCard({ product }: ProductCardProps) {
         >
           {product.name}
         </Link>
-        
-        <p className="mb-3 text-xs text-neutral-500 line-clamp-2 min-h-[2rem]">
-          {product.shortDescription}
-        </p>
 
         {/* Pricing Area */}
         <div className="mb-4 flex items-baseline gap-2">
@@ -166,29 +187,42 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Action Controls */}
         <div className="mt-auto space-y-3">
-          <div className="flex items-center justify-between gap-3">
-            <span className="text-[10px] font-medium text-neutral-400">
-              {currentStock > 0 ? `${currentStock} items left` : "Out of stock"}
-            </span>
-            {currentStock > 0 && (
+          {currentStock > 0 ? (
+            <div className="w-full">
               <QuantityStepper
                 value={quantity}
                 onChange={setQuantity}
                 max={currentStock}
+                className="w-full flex [&>span]:flex-1"
               />
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="w-full text-center text-xs font-bold text-red-500 py-2 bg-red-50 border border-red-100 rounded-custom-md">
+              Out of Stock
+            </div>
+          )}
 
-          <Button
-            onClick={handleAddToCart}
-            disabled={currentStock <= 0 || isAdding}
-            variant={currentStock <= 0 ? "outline" : "primary"}
-            className="w-full justify-center gap-2 h-9 text-xs"
-            isLoading={isAdding}
-          >
-            <ShoppingCart className="h-3.5 w-3.5" />
-            {currentStock <= 0 ? "Sold Out" : "Add to Cart"}
-          </Button>
+          <div className="flex flex-col gap-2 pt-1">
+            <Button
+              onClick={handleBuyNow}
+              disabled={currentStock <= 0}
+              variant={currentStock <= 0 ? "outline" : "primary"}
+              className="w-full justify-center gap-2 h-9 text-xs font-bold bg-neutral-900 hover:bg-neutral-800 text-white border-transparent"
+            >
+              Buy Now
+            </Button>
+
+            <Button
+              onClick={handleAddToCart}
+              disabled={currentStock <= 0 || isAdding}
+              variant="outline"
+              className="w-full justify-center gap-2 h-9 text-xs font-bold border-neutral-200 text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
+              isLoading={isAdding}
+            >
+              <ShoppingCart className="h-3.5 w-3.5" />
+              {currentStock <= 0 ? "Sold Out" : "Add to Cart"}
+            </Button>
+          </div>
         </div>
       </div>
     </div>
