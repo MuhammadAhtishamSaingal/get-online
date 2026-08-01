@@ -136,20 +136,6 @@ export default function Home() {
     }
   ];
 
-  if (isLoading) {
-    return (
-      <div className="flex flex-col min-h-screen bg-white">
-        <Header />
-        <div className="flex-grow flex items-center justify-center py-40">
-          <div className="flex flex-col items-center gap-4">
-            <div className="h-10 w-10 animate-spin rounded-full border-4 border-neutral-200 border-t-brand-primary" />
-            <p className="text-xs text-neutral-500 font-semibold uppercase tracking-wider">Loading GizmoGrid...</p>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
 
   if (error) {
     return (
@@ -406,11 +392,17 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {featuredProducts.map((product, idx) => (
-                <div key={product._id || product.id} className={`animate-fade-in-up stagger-delay-${(idx % 4) + 1}`}>
-                  <ProductCard product={product} />
-                </div>
-              ))}
+              {isLoading ? (
+                [...Array(4)].map((_, i) => (
+                  <div key={i} className="animate-pulse bg-neutral-200/50 rounded-custom-xl aspect-[3/4] w-full" />
+                ))
+              ) : (
+                featuredProducts.map((product, idx) => (
+                  <div key={product._id || product.id} className={`animate-fade-in-up stagger-delay-${(idx % 4) + 1}`}>
+                    <ProductCard product={product} />
+                  </div>
+                ))
+              )}
             </div>
           </div>
         </section>
@@ -428,11 +420,17 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {bestSellers.map((product, idx) => (
-                <div key={product._id || product.id} className={`animate-fade-in-up stagger-delay-${(idx % 4) + 1}`}>
-                  <ProductCard product={product} />
-                </div>
-              ))}
+              {isLoading ? (
+                [...Array(4)].map((_, i) => (
+                  <div key={i} className="animate-pulse bg-neutral-200/50 rounded-custom-xl aspect-[3/4] w-full" />
+                ))
+              ) : (
+                bestSellers.map((product, idx) => (
+                  <div key={product._id || product.id} className={`animate-fade-in-up stagger-delay-${(idx % 4) + 1}`}>
+                    <ProductCard product={product} />
+                  </div>
+                ))
+              )}
             </div>
           </div>
         </section>
@@ -450,11 +448,17 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              {newArrivals.map((product, idx) => (
-                <div key={product._id || product.id} className={`animate-fade-in-up stagger-delay-${(idx % 4) + 1}`}>
-                  <ProductCard product={product} />
-                </div>
-              ))}
+              {isLoading ? (
+                [...Array(4)].map((_, i) => (
+                  <div key={i} className="animate-pulse bg-neutral-200/50 rounded-custom-xl aspect-[3/4] w-full" />
+                ))
+              ) : (
+                newArrivals.map((product, idx) => (
+                  <div key={product._id || product.id} className={`animate-fade-in-up stagger-delay-${(idx % 4) + 1}`}>
+                    <ProductCard product={product} />
+                  </div>
+                ))
+              )}
             </div>
           </div>
         </section>
