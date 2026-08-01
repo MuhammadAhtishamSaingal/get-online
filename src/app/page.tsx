@@ -25,6 +25,17 @@ import { ProductCard } from "@/components/ui/product-card";
 import { HeroBanner } from "@/components/layout/hero-banner";
 import { ParallaxFeature } from "@/components/ui/parallax-feature";
 
+const CATEGORIES_MARQUEE = [
+  { name: "Car Holders", slug: "mobile-accessories", image: "/images/cat-smartwatch.png" },
+  { name: "Laptop Accessories", slug: "computer-accessories", image: "/images/cat-computer.png" },
+  { name: "Power Banks", slug: "chargers", image: "/images/gan-charger.png" },
+  { name: "Car Chargers", slug: "chargers", image: "/images/gan-charger.png" },
+  { name: "Chargers", slug: "chargers", image: "/images/gan-charger.png" },
+  { name: "Cables", slug: "mobile-accessories", image: "/images/prod-keyboard.png" },
+  { name: "Audios", slug: "earbuds", image: "/images/cat-audio.png" },
+  { name: "Car Accessories", slug: "mobile-accessories", image: "/images/hero.png" },
+];
+
 export default function Home() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
 
@@ -234,6 +245,53 @@ export default function Home() {
                   <p className="text-[10px] text-neutral-400">Get assistance anytime</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Infinite Scrolling Category Marquee Section */}
+        <section className="bg-neutral-50 py-8 overflow-hidden border-b border-neutral-200">
+          <div className="relative w-full">
+            {/* Styles for continuous marquee motion */}
+            <style dangerouslySetInnerHTML={{ __html: `
+              @keyframes marqueeContinuous {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .marquee-track {
+                display: flex;
+                width: max-content;
+                animation: marqueeContinuous 30s linear infinite;
+              }
+              .marquee-track:hover {
+                animation-play-state: paused;
+              }
+            `}} />
+
+            <div className="marquee-track flex gap-6 px-4">
+              {[...CATEGORIES_MARQUEE, ...CATEGORIES_MARQUEE].map((cat, idx) => (
+                <Link
+                  key={idx}
+                  href={`/shop?category=${cat.slug}`}
+                  className="flex items-center gap-4 bg-white border border-neutral-200/60 rounded-custom-xl p-3 w-64 shadow-sm flex-shrink-0 hover:shadow-md hover:border-neutral-300 transition-all duration-300 group"
+                >
+                  <div className="h-16 w-16 relative bg-neutral-50 rounded-custom-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+                    <Image
+                      src={cat.image}
+                      alt={cat.name}
+                      fill
+                      className="object-contain p-1.5 group-hover:scale-105 transition-transform duration-500"
+                      sizes="64px"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xs font-extrabold uppercase tracking-wider text-neutral-800">
+                      {cat.name}
+                    </h3>
+                    <p className="text-[10px] text-neutral-400 font-semibold uppercase mt-0.5">Explore →</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
@@ -729,6 +787,52 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Join Our Community Newsletter Section */}
+        <section className="relative w-full h-[380px] sm:h-[420px] overflow-hidden flex items-center justify-center">
+          {/* Background image */}
+          <Image
+            src="/images/parallax-home.png"
+            alt="Join our community backdrop"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-neutral-950/70 z-0" />
+
+          {/* Centered Content Card */}
+          <div className="relative z-10 text-center max-w-2xl px-6 space-y-6">
+            <h2 className="font-display text-3xl sm:text-4xl font-black uppercase tracking-[0.2em] text-white leading-none">
+              Join Our Community
+            </h2>
+            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed max-w-xl mx-auto">
+              Subscribe to receive first time brand update, access to exclusive deals, and 15% off your first order.
+            </p>
+
+            <form
+              className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto pt-2"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Thank you for joining our community! Code: GIZMO15 has been sent to your email.");
+              }}
+            >
+              <input
+                type="email"
+                required
+                placeholder="Your e-mail"
+                className="w-full sm:w-64 bg-white border border-transparent text-sm px-4 py-2.5 text-neutral-900 placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+              />
+              <button
+                type="submit"
+                className="bg-white hover:bg-neutral-100 text-black text-xs font-extrabold uppercase tracking-widest px-8 py-3 rounded-full flex items-center justify-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-md self-center sm:self-auto"
+              >
+                <span>Subscribe</span>
+                <span className="text-sm">→</span>
+              </button>
+            </form>
           </div>
         </section>
 
