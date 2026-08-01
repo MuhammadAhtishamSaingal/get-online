@@ -24,6 +24,7 @@ function getOptimizedImageUrl(url: string, width: number, height: number): strin
 const SLIDES = [
   {
     image: "/images/cat-smartwatch.png",
+    mobileImage: "/images/cat-smartwatch-mobile.png",
     caption: "GO FURTHER. MOVE FREER.",
     headline: "Active Sport Loop",
     ctaText: "Shop Now",
@@ -31,6 +32,7 @@ const SLIDES = [
   },
   {
     image: "/images/hero.png",
+    mobileImage: "/images/hero-mobile.png",
     caption: "ENGINEERED FOR PRECISION.",
     headline: "Precision Mouse X1",
     ctaText: "Shop Now",
@@ -38,6 +40,7 @@ const SLIDES = [
   },
   {
     image: "/images/prod-keyboard.png",
+    mobileImage: "/images/prod-keyboard-mobile.png",
     caption: "DESIGNED TO INSPIRE.",
     headline: "TactileAir Keyboard",
     ctaText: "Shop Now",
@@ -45,6 +48,7 @@ const SLIDES = [
   },
   {
     image: "/images/prod-buds.png",
+    mobileImage: "/images/prod-buds-mobile.png",
     caption: "IMMERSIVE AUDIO EXPERIENCE.",
     headline: "SonicWave Buds Pro",
     ctaText: "Shop Now",
@@ -52,6 +56,7 @@ const SLIDES = [
   },
   {
     image: "/images/gan-charger.png",
+    mobileImage: "/images/gan-charger-mobile.png",
     caption: "NEXT-GEN POWER DELIVERY.",
     headline: "HyperCharge GaN",
     ctaText: "Shop Now",
@@ -162,13 +167,22 @@ export function HeroBanner() {
                 : `slide-3d ${getSlideClass(idx, current, SLIDES.length)}`
             )}
           >
-            {/* Background image */}
+            {/* Desktop Background image */}
             <Image
               src={getOptimizedImageUrl(slide.image, 1920, 1080)}
               alt={slide.headline}
               fill
               priority={idx === 0}
-              className="object-cover"
+              className="hidden md:block object-cover"
+              sizes="100vw"
+            />
+            {/* Mobile Background image */}
+            <Image
+              src={getOptimizedImageUrl(slide.mobileImage, 1080, 1920)}
+              alt={slide.headline}
+              fill
+              priority={idx === 0}
+              className="block md:hidden object-cover"
               sizes="100vw"
             />
             {/* Dark gradient overlay */}
