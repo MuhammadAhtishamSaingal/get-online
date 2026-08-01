@@ -49,8 +49,8 @@ function MegaMenuCard({ product, idx, onClick }: { product: any; idx: number; on
       onClick={onClick}
       className="w-[260px] bg-white border border-neutral-200/60 rounded-custom-xl p-4 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 cursor-pointer flex-shrink-0 flex flex-col items-center"
       style={{
-        animation: "slideLeftFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        animationDelay: `${idx * 60}ms`,
+        animation: "slideLeftFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        animationDelay: `${idx * 80}ms`,
         opacity: 0,
       }}
     >
