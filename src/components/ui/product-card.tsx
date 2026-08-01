@@ -216,11 +216,13 @@ export function ProductCard({ product }: ProductCardProps) {
               onClick={handleAddToCart}
               disabled={currentStock <= 0 || isAdding}
               variant="outline"
-              className="w-full justify-center gap-2 h-9 text-xs font-bold border-neutral-200 text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
+              className="w-full justify-center gap-1.5 sm:gap-2 h-9 border-neutral-200 text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900"
               isLoading={isAdding}
             >
-              <ShoppingCart className="h-3.5 w-3.5" />
-              {currentStock <= 0 ? "Sold Out" : "Add to Cart"}
+              <ShoppingCart className="h-4.5 w-4.5 sm:h-3.5 sm:w-3.5 flex-shrink-0" />
+              <span className="whitespace-nowrap text-[10.5px] sm:text-xs">
+                {currentStock <= 0 ? "Sold Out" : "Add to Cart"}
+              </span>
             </Button>
           </div>
         </div>
