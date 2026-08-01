@@ -106,19 +106,60 @@ export function HeroBanner() {
     setCurrent(idx);
   };
 
+  const getSlideClass = (idx: number, activeIdx: number, total: number) => {
+    if (idx === activeIdx) return "slide-active";
+    let isPrev = idx < activeIdx;
+    if (activeIdx === 0 && idx === total - 1) {
+      isPrev = true;
+    } else if (activeIdx === total - 1 && idx === 0) {
+      isPrev = false;
+    }
+    return isPrev ? "slide-inactive-prev" : "slide-inactive-next";
+  };
+
   return (
     <section
-      className="relative w-full h-[calc(100vh-2rem)] h-[calc(100dvh-2rem)] min-h-[380px] bg-neutral-950 overflow-hidden group"
+      className="relative w-full h-[calc(100vh-2rem)] h-[calc(100dvh-2rem)] min-h-[380px] bg-neutral-950 overflow-hidden group banner-perspective"
     >
+      {/* 3D Flip Styles */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .banner-perspective {
+          perspective: 2000px;
+        }
+        .slide-3d {
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease-in-out;
+        }
+        .slide-active {
+          transform: rotateY(0deg) scale(1);
+          opacity: 1;
+          z-index: 10;
+        }
+        .slide-inactive-next {
+          transform: rotateY(180deg) scale(0.95);
+          opacity: 0;
+          z-index: 0;
+          pointer-events: none;
+        }
+        .slide-inactive-prev {
+          transform: rotateY(-180deg) scale(0.95);
+          opacity: 0;
+          z-index: 0;
+          pointer-events: none;
+        }
+      `}} />
+
       {SLIDES.map((slide, idx) => {
         const isActive = idx === current;
         return (
           <div
             key={idx}
             className={cn(
-              "absolute inset-0 w-full h-full transition-opacity ease-out",
-              prefersReducedMotion ? "duration-0" : "duration-500",
-              isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+              "absolute inset-0 w-full h-full",
+              prefersReducedMotion
+                ? (isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none")
+                : `slide-3d ${getSlideClass(idx, current, SLIDES.length)}`
             )}
           >
             {/* Background image */}
