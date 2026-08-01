@@ -31,6 +31,81 @@ const SAMPLE_SUGGESTIONS = [
   { name: "Horizon Watch Series X", category: "Wearables", price: "$329.00" },
 ];
 
+// Reusable Desktop Product Card with runtime image fallback
+function MegaMenuCard({ product, idx, onClick }: { product: any; idx: number; onClick: () => void }) {
+  const imageUrl = product.images?.[0]?.url || product.image || "/images/gan-charger.png";
+  const [imgSrc, setImgSrc] = React.useState(imageUrl);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setImgSrc(imageUrl);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [imageUrl]);
+
+  return (
+    <Link
+      href={`/products/${product.slug}`}
+      onClick={onClick}
+      className="w-40 bg-white border border-neutral-200/60 rounded-custom-xl p-3 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 cursor-pointer flex-shrink-0 flex flex-col items-center"
+      style={{
+        animation: "slideUpFade 0.4s ease-out forwards",
+        animationDelay: `${idx * 40}ms`,
+        opacity: 0,
+      }}
+    >
+      <div className="w-32 h-32 relative bg-neutral-50 rounded-custom-lg overflow-hidden flex items-center justify-center mb-2">
+        <Image
+          src={imgSrc}
+          alt={product.name}
+          fill
+          className="object-contain p-2 hover:scale-105 transition-transform duration-500"
+          sizes="120px"
+          onError={() => setImgSrc("/images/gan-charger.png")}
+        />
+      </div>
+      <span className="text-[10px] font-bold text-neutral-700 tracking-wider text-center uppercase truncate w-full mt-2.5">
+        {product.name}
+      </span>
+    </Link>
+  );
+}
+
+// Reusable Mobile Product Card with runtime image fallback
+function MobileMegaMenuCard({ product, onClick }: { product: any; onClick: () => void }) {
+  const imageUrl = product.images?.[0]?.url || product.image || "/images/gan-charger.png";
+  const [imgSrc, setImgSrc] = React.useState(imageUrl);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setImgSrc(imageUrl);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [imageUrl]);
+
+  return (
+    <Link
+      href={`/products/${product.slug}`}
+      onClick={onClick}
+      className="w-28 bg-white border border-neutral-200/55 rounded-custom-lg p-2 shadow-sm flex-shrink-0 flex flex-col items-center"
+    >
+      <div className="w-24 h-24 relative bg-neutral-50 rounded-custom-md overflow-hidden flex items-center justify-center">
+        <Image
+          src={imgSrc}
+          alt={product.name}
+          fill
+          className="object-contain p-1"
+          sizes="96px"
+          onError={() => setImgSrc("/images/gan-charger.png")}
+        />
+      </div>
+      <span className="text-[9px] font-bold text-neutral-800 tracking-wider text-center uppercase truncate w-full mt-1.5">
+        {product.name}
+      </span>
+    </Link>
+  );
+}
+
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
@@ -392,7 +467,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mega Menu panel */}
+        {/* Mega Menu panel (Tightened layout spacing to fit cohesively) */}
         <div
           onMouseEnter={() => activeMenu && handleMouseEnter(activeMenu)}
           onMouseLeave={handleMouseLeave}
@@ -407,7 +482,7 @@ export function Header() {
           }}
         >
           {activeMenu && (
-            <div className="w-full px-8 py-6 md:px-16 md:py-10">
+            <div className="w-full px-8 py-3 md:px-16 md:py-4">
               {/* Horizontal slider container */}
               <div className="relative w-full flex items-center group/slider">
                 {/* Left Control */}
@@ -422,33 +497,15 @@ export function Header() {
                 {/* Slider track */}
                 <div
                   ref={sliderRef}
-                  className="w-full flex gap-5 overflow-x-auto scrollbar-none py-3 px-12 scroll-smooth"
+                  className="w-full flex gap-5 overflow-x-auto scrollbar-none py-1.5 px-12 scroll-smooth"
                 >
                   {menuProducts.map((product, idx) => (
-                    <Link
+                    <MegaMenuCard
                       key={product._id}
-                      href={`/products/${product.slug}`}
+                      product={product}
+                      idx={idx}
                       onClick={() => setActiveMenu(null)}
-                      className="w-40 bg-white border border-neutral-200/60 rounded-custom-xl p-3 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 cursor-pointer flex-shrink-0 flex flex-col items-center"
-                      style={{
-                        animation: "slideUpFade 0.4s ease-out forwards",
-                        animationDelay: `${idx * 40}ms`,
-                        opacity: 0,
-                      }}
-                    >
-                      <div className="w-32 h-32 relative bg-neutral-50 rounded-custom-lg overflow-hidden flex items-center justify-center mb-2">
-                        <Image
-                          src={product.images?.[0] || product.image || "/images/placeholder.png"}
-                          alt={product.name}
-                          fill
-                          className="object-contain p-2 hover:scale-105 transition-transform duration-500"
-                          sizes="120px"
-                        />
-                      </div>
-                      <span className="text-[10px] font-bold text-neutral-700 tracking-wider text-center uppercase truncate w-full mt-2.5">
-                        {product.name}
-                      </span>
-                    </Link>
+                    />
                   ))}
                   {menuProducts.length === 0 && (
                     <div className="w-full text-center py-10 text-xs text-neutral-400">
@@ -629,28 +686,14 @@ export function Header() {
                         <div className="overflow-hidden">
                           <div className="flex gap-3 overflow-x-auto py-2 scrollbar-none scroll-smooth">
                             {productsForLink.map((product) => (
-                              <Link
+                              <MobileMegaMenuCard
                                 key={product._id}
-                                href={`/products/${product.slug}`}
+                                product={product}
                                 onClick={() => {
                                   setIsMobileNavOpen(false);
                                   setExpandedMobileMenu(null);
                                 }}
-                                className="w-28 bg-white border border-neutral-200/50 rounded-custom-lg p-2 shadow-sm flex-shrink-0 flex flex-col items-center"
-                              >
-                                <div className="w-24 h-24 relative bg-neutral-50 rounded-custom-md overflow-hidden flex items-center justify-center">
-                                  <Image
-                                    src={product.images?.[0] || product.image || "/images/placeholder.png"}
-                                    alt={product.name}
-                                    fill
-                                    className="object-contain p-1"
-                                    sizes="96px"
-                                  />
-                                </div>
-                                <span className="text-[9px] font-bold text-neutral-800 tracking-wider text-center uppercase truncate w-full mt-1.5">
-                                  {product.name}
-                                </span>
-                              </Link>
+                              />
                             ))}
                             {productsForLink.length === 0 && (
                               <div className="w-full text-center py-4 text-xs text-neutral-400">
