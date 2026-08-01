@@ -23,6 +23,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ProductCard } from "@/components/ui/product-card";
 import { HeroBanner } from "@/components/layout/hero-banner";
+import { ParallaxFeature } from "@/components/ui/parallax-feature";
 
 export default function Home() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
@@ -478,6 +479,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Parallax Lifestyle/Editorial Section */}
+        <ParallaxFeature
+          backgroundImage="/images/parallax-home.png"
+          headline="The Art of the Desk Setup"
+          description="Experience the synergy of form and function. Elevate your everyday workspace with design-forward accessories crafted for comfort and focus."
+          ctaText="Explore the Look"
+          ctaLink="/shop"
+        />
 
         {/* Detailed Delivery & COD info (NEW) */}
         <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-neutral-50 border-t border-neutral-200">
