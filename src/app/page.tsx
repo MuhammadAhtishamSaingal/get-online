@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   Star,
   ArrowRight,
-  MessageCircle,
   Clock,
   Award,
   Leaf,
@@ -847,10 +846,12 @@ export default function Home() {
         href="https://wa.me/1234567890"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white p-3.5 rounded-full shadow-lg transition-transform hover:scale-105 active:scale-95 duration-200 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 focus-visible:outline-none"
+        className="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20ba56] text-white p-3.5 rounded-full shadow-lg transition-transform hover:scale-105 active:scale-95 duration-200 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:outline-none"
         aria-label="Contact support on WhatsApp"
       >
-        <MessageCircle className="h-6 w-6" />
+        <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.16 1.448 4.787 1.449 5.541 0 10.054-4.517 10.058-10.066.002-2.686-1.038-5.208-2.93-7.105-1.888-1.888-4.399-2.928-7.086-2.929-5.545 0-10.059 4.518-10.063 10.068-.001 2.01.536 3.97 1.553 5.727L1.077 22.03l6.57-1.724zm10.975-6.666c-.28-.14-1.657-.818-1.913-.911-.257-.093-.443-.14-.629.14-.186.28-.72.911-.882 1.096-.162.186-.325.21-.605.07-1.15-.577-1.988-1.01-2.78-2.38-.208-.358.208-.333.595-1.106.065-.13.033-.243-.016-.342-.049-.099-.443-1.07-.607-1.464-.16-.384-.337-.333-.463-.34-.12-.006-.257-.007-.395-.007-.138 0-.361.052-.55.257-.189.206-.723.707-.723 1.724 0 1.017.74 2.003.843 2.143.103.14 1.456 2.224 3.527 3.118 1.637.708 2.223.743 2.853.65.658-.097 1.657-.677 1.89-1.332.233-.654.233-1.215.163-1.332-.07-.116-.256-.186-.536-.326z"/>
+        </svg>
       </a>
 
       {/* Footer */}
