@@ -185,7 +185,7 @@ export default function Home() {
       <Header />
 
       {/* Main Content (with top padding to account for sticky header) */}
-      <main className="flex-grow pt-8">
+      <main className="flex-grow pt-11">
         
         {/* Hero Section */}
         <HeroBanner />

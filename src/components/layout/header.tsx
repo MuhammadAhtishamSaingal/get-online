@@ -281,7 +281,7 @@ export function Header() {
       {/* Announcement Bar */}
       <div
         className={cn(
-          "bg-neutral-950 text-white text-[11px] font-semibold tracking-widest uppercase flex items-center justify-center gap-6 h-8 fixed top-0 left-0 right-0 z-50 transition-transform duration-300",
+          "bg-neutral-950 text-white text-[11px] font-semibold tracking-widest uppercase flex items-center justify-center gap-6 h-11 fixed top-0 left-0 right-0 z-50 transition-transform duration-300",
           isScrolled ? "-translate-y-full" : "translate-y-0"
         )}
       >
@@ -294,7 +294,7 @@ export function Header() {
       <header
         className={cn(
           "fixed left-0 right-0 z-40 w-full transition-all duration-300 border-b rounded-none",
-          isScrolled ? "top-0 shadow-md" : "top-8 border-transparent",
+          isScrolled ? "top-0 shadow-md" : "top-11 border-transparent",
           isTransparentActive
             ? "bg-transparent border-transparent shadow-none"
             : "bg-white border-neutral-200/60 shadow-sm"
