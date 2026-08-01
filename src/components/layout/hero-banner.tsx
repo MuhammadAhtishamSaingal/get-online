@@ -108,7 +108,7 @@ export function HeroBanner() {
 
   return (
     <section
-      className="relative w-full h-[calc(100vh-2rem)] min-h-[500px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] bg-neutral-950 overflow-hidden group"
+      className="relative w-full h-[calc(100vh-2rem)] h-[calc(100dvh-2rem)] min-h-[420px] bg-neutral-950 overflow-hidden group"
     >
       {SLIDES.map((slide, idx) => {
         const isActive = idx === current;
