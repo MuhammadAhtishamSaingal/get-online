@@ -31,7 +31,7 @@ const SAMPLE_SUGGESTIONS = [
   { name: "Horizon Watch Series X", category: "Wearables", price: "$329.00" },
 ];
 
-// Reusable Desktop Product Card with runtime image fallback
+// Reusable Desktop Product Card with large image layouts matching Baseus reference
 function MegaMenuCard({ product, idx, onClick }: { product: any; idx: number; onClick: () => void }) {
   const imageUrl = product.images?.[0]?.url || product.image || "/images/gan-charger.png";
   const [imgSrc, setImgSrc] = React.useState(imageUrl);
@@ -47,24 +47,24 @@ function MegaMenuCard({ product, idx, onClick }: { product: any; idx: number; on
     <Link
       href={`/products/${product.slug}`}
       onClick={onClick}
-      className="w-40 bg-white border border-neutral-200/60 rounded-custom-xl p-3 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 cursor-pointer flex-shrink-0 flex flex-col items-center"
+      className="w-[210px] bg-white border border-neutral-200/60 rounded-custom-xl p-4 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 cursor-pointer flex-shrink-0 flex flex-col items-center"
       style={{
         animation: "slideUpFade 0.4s ease-out forwards",
         animationDelay: `${idx * 40}ms`,
         opacity: 0,
       }}
     >
-      <div className="w-32 h-32 relative bg-neutral-50 rounded-custom-lg overflow-hidden flex items-center justify-center mb-2">
+      <div className="w-[180px] h-[180px] relative bg-neutral-50 rounded-custom-lg overflow-hidden flex items-center justify-center mb-3">
         <Image
           src={imgSrc}
           alt={product.name}
           fill
           className="object-contain p-2 hover:scale-105 transition-transform duration-500"
-          sizes="120px"
+          sizes="180px"
           onError={() => setImgSrc("/images/gan-charger.png")}
         />
       </div>
-      <span className="text-[10px] font-bold text-neutral-700 tracking-wider text-center uppercase truncate w-full mt-2.5">
+      <span className="text-[11px] font-bold text-neutral-800 tracking-wider text-center uppercase truncate w-full mt-1">
         {product.name}
       </span>
     </Link>
@@ -202,7 +202,7 @@ export function Header() {
 
   const scrollCarousel = (direction: "left" | "right") => {
     if (sliderRef.current) {
-      const scrollAmount = 380;
+      const scrollAmount = 440; // Scrolled slightly larger for bigger cards
       sliderRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -214,13 +214,12 @@ export function Header() {
     setExpandedMobileMenu(prev => (prev === menuName ? null : menuName));
   };
 
-  // Nav links configured in exact Baseus specifications
+  // Nav links configured in exact Baseus specifications (removed Deals)
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "All Products", href: "/shop" },
     { name: "Just Landed", href: "/shop?filter=new" },
     { name: "Sale", href: "/shop?filter=sale" },
-    { name: "Deals", href: "/shop?filter=deals" },
     { name: "Support", href: "/track" }, // Linked to the order tracking portal
     { name: "Explore", href: "/shop" },
   ];
@@ -240,8 +239,6 @@ export function Header() {
       case "Just Landed":
         return products.filter(p => p.newArrival).slice(0, 12);
       case "Sale":
-        return products.filter(p => p.compareAtPrice && p.compareAtPrice > p.basePrice).slice(0, 12);
-      case "Deals":
         return products.filter(p => p.compareAtPrice && p.compareAtPrice > p.basePrice).slice(0, 12);
       default:
         return [];
@@ -326,10 +323,11 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links - Increased font size to text-[15px] & added active underlines */}
           <nav className="hidden lg:flex lg:gap-x-6 xl:gap-x-8 h-full items-center">
             {navLinks.map((link) => {
-              const hasMegaMenu = ["All Products", "Just Landed", "Sale", "Deals"].includes(link.name);
+              const hasMegaMenu = ["All Products", "Just Landed", "Sale"].includes(link.name);
+              const isActiveMenu = activeMenu === link.name;
               return (
                 <div
                   key={link.name}
@@ -340,13 +338,16 @@ export function Header() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "text-sm font-semibold transition-colors duration-300 focus-visible:outline-none hover:text-brand-primary px-1.5 py-2",
+                      "text-[15px] font-semibold transition-colors duration-300 focus-visible:outline-none hover:text-brand-primary px-1.5 py-2 relative",
                       isTransparentActive
                         ? "text-white/80 hover:text-white"
                         : "text-neutral-600 hover:text-brand-primary"
                     )}
                   >
-                    {link.name}
+                    <span>{link.name}</span>
+                    {isActiveMenu && (
+                      <span className="absolute bottom-0 left-1.5 right-1.5 h-[2px] bg-brand-primary animate-fade-in" />
+                    )}
                   </Link>
                 </div>
               );
@@ -467,7 +468,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mega Menu panel (Tightened layout spacing to fit cohesively) */}
+        {/* Mega Menu panel (Removed relative scroll-dependent top calculation to eliminate gap) */}
         <div
           onMouseEnter={() => activeMenu && handleMouseEnter(activeMenu)}
           onMouseLeave={handleMouseLeave}
@@ -478,7 +479,7 @@ export function Header() {
               : "opacity-0 -translate-y-2 scale-y-95 pointer-events-none"
           )}
           style={{
-            top: isScrolled ? "64px" : "96px",
+            top: "64px", // Pinned exactly at bottom boundary of header container at all times
           }}
         >
           {activeMenu && (
@@ -494,14 +495,14 @@ export function Header() {
                   <ChevronLeft className="h-5 w-5 text-neutral-600" />
                 </button>
 
-                {/* Slider track */}
+                {/* Slider track - React Key updated to force components re-mounting on tab hovers */}
                 <div
                   ref={sliderRef}
-                  className="w-full flex gap-5 overflow-x-auto scrollbar-none py-1.5 px-12 scroll-smooth"
+                  className="w-full flex gap-5 overflow-x-auto scrollbar-none py-2 px-12 scroll-smooth"
                 >
                   {menuProducts.map((product, idx) => (
                     <MegaMenuCard
-                      key={product._id}
+                      key={`${activeMenu}-${product._id}`}
                       product={product}
                       idx={idx}
                       onClick={() => setActiveMenu(null)}
@@ -647,7 +648,7 @@ export function Header() {
             {/* Expandable Accordion Menu items */}
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => {
-                const hasMegaMenu = ["All Products", "Just Landed", "Sale", "Deals"].includes(link.name);
+                const hasMegaMenu = ["All Products", "Just Landed", "Sale"].includes(link.name);
                 
                 if (hasMegaMenu) {
                   const isExpanded = expandedMobileMenu === link.name;
@@ -658,8 +659,6 @@ export function Header() {
                       case "Just Landed":
                         return products.filter(p => p.newArrival).slice(0, 8);
                       case "Sale":
-                        return products.filter(p => p.compareAtPrice && p.compareAtPrice > p.basePrice).slice(0, 8);
-                      case "Deals":
                         return products.filter(p => p.compareAtPrice && p.compareAtPrice > p.basePrice).slice(0, 8);
                       default:
                         return [];
