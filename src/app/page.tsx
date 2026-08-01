@@ -28,19 +28,7 @@ import { ParallaxFeature } from "@/components/ui/parallax-feature";
 export default function Home() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
 
-  // Monitor scroll for announcement bar hiding
-  const [isScrolled, setIsScrolled] = React.useState(false);
-  React.useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
 
   // Dynamic database states
   const [featuredProducts, setFeaturedProducts] = React.useState<any[]>([]);
@@ -195,14 +183,7 @@ export default function Home() {
           })
         }}
       />
-      {/* Announcement Bar */}
-      <div className={`bg-neutral-950 text-white text-[11px] font-semibold tracking-widest uppercase flex items-center justify-center gap-6 h-8 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
-        isScrolled ? "-translate-y-full" : "translate-y-0"
-      }`}>
-        <span>⚡ Free shipping on orders over $50</span>
-        <span className="hidden sm:inline">📦 Cash on Delivery nationwide</span>
-        <span className="hidden md:inline">🛡️ 2-Year official warranty</span>
-      </div>
+
 
       {/* Header */}
       <Header />
