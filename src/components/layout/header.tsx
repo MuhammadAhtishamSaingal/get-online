@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Search, ShoppingCart, Heart, User, Menu, ArrowRight, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,9 @@ export function Header() {
   // Cart Store Hooks
   const { items, removeItem, updateQuantity, getCartCount, getCartTotal } = useCartStore();
   const [isMounted, setIsMounted] = React.useState(false);
+
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
 
   // Avoid hydration mismatch
   React.useEffect(() => {
@@ -81,12 +85,16 @@ export function Header() {
   const cartCount = isMounted ? getCartCount() : 0;
   const cartTotal = isMounted ? getCartTotal() : 0;
 
+  const isTransparentActive = isHomepage && !isScrolled;
+
   return (
     <>
       <header
         className={cn(
-          "fixed top-8 left-0 right-0 z-40 mx-auto w-[95%] max-w-7xl rounded-custom-xl transition-all duration-300 border border-transparent",
-          isScrolled
+          "fixed left-0 right-0 z-40 mx-auto w-[95%] max-w-7xl rounded-custom-xl transition-all duration-300 border",
+          isTransparentActive
+            ? "bg-transparent border-transparent shadow-none top-8"
+            : isScrolled
             ? "glassmorphism border-neutral-200/50 shadow-md translate-y-[-24px] top-6"
             : "bg-white/80 backdrop-blur-sm border-neutral-100 top-8"
         )}
@@ -96,7 +104,12 @@ export function Header() {
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsMobileNavOpen(true)}
-              className="rounded-custom-md p-2 text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 transition-colors"
+              className={cn(
+                "rounded-custom-md p-2 transition-colors duration-300",
+                isTransparentActive
+                  ? "text-white hover:bg-white/10"
+                  : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+              )}
               aria-label="Open navigation menu"
             >
               <Menu className="h-5 w-5" />
@@ -107,7 +120,10 @@ export function Header() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="font-display text-xl font-bold tracking-tight text-neutral-900 flex items-center gap-1.5 focus-visible:outline-none"
+              className={cn(
+                "font-display text-xl font-bold tracking-tight flex items-center gap-1.5 focus-visible:outline-none transition-colors duration-300",
+                isTransparentActive ? "text-white" : "text-neutral-900"
+              )}
             >
               <span className="h-6 w-6 rounded-custom-sm bg-brand-primary flex items-center justify-center text-white text-xs font-black">
                 G
@@ -122,7 +138,12 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-neutral-600 hover:text-brand-primary transition-colors focus-visible:outline-none focus-visible:underline"
+                className={cn(
+                  "text-sm font-medium transition-colors duration-300 focus-visible:outline-none focus-visible:underline",
+                  isTransparentActive
+                    ? "text-white/80 hover:text-white"
+                    : "text-neutral-600 hover:text-brand-primary"
+                )}
               >
                 {link.name}
               </Link>
@@ -134,7 +155,7 @@ export function Header() {
             {/* Search Input (Desktop) */}
             <div className="relative hidden md:block w-64">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                <Search className="h-4 w-4 text-neutral-400" />
+                <Search className={cn("h-4 w-4 transition-colors duration-300", isTransparentActive ? "text-white/60" : "text-neutral-400")} />
               </div>
               <input
                 type="text"
@@ -148,7 +169,12 @@ export function Header() {
                   }
                 }}
                 placeholder="Search premium gear..."
-                className="w-full h-9 rounded-full border border-neutral-200/80 bg-neutral-50 pl-9 pr-4 text-xs text-neutral-900 placeholder:text-neutral-400 focus:border-brand-primary focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-primary transition-all"
+                className={cn(
+                  "w-full h-9 rounded-full border pl-9 pr-4 text-xs focus:outline-none transition-all duration-300",
+                  isTransparentActive
+                    ? "border-white/25 bg-white/10 text-white placeholder:text-white/60 focus:border-white focus:ring-1 focus:ring-white focus:bg-white/15"
+                    : "border-neutral-200/80 bg-neutral-50 text-neutral-900 placeholder:text-neutral-400 focus:border-brand-primary focus:bg-white focus:ring-1 focus:ring-brand-primary"
+                )}
               />
 
               {/* Suggestions Dropdown */}
@@ -188,14 +214,24 @@ export function Header() {
             <div className="hidden lg:flex items-center gap-2">
               <Link
                 href="/favorites"
-                className="rounded-custom-md p-2 text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 transition-colors"
+                className={cn(
+                  "rounded-custom-md p-2 transition-colors duration-300",
+                  isTransparentActive
+                    ? "text-white/80 hover:bg-white/10 hover:text-white"
+                    : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+                )}
                 aria-label="Favorites"
               >
                 <Heart className="h-5 w-5" />
               </Link>
               <Link
                 href="/admin/login"
-                className="rounded-custom-md p-2 text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 transition-colors"
+                className={cn(
+                  "rounded-custom-md p-2 transition-colors duration-300",
+                  isTransparentActive
+                    ? "text-white/80 hover:bg-white/10 hover:text-white"
+                    : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+                )}
                 aria-label="Account / Admin Login"
               >
                 <User className="h-5 w-5" />
@@ -205,7 +241,12 @@ export function Header() {
             {/* Cart Icon Trigger */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative rounded-custom-md p-2 text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 transition-colors focus-visible:outline-none"
+              className={cn(
+                "relative rounded-custom-md p-2 transition-colors duration-300 focus-visible:outline-none",
+                isTransparentActive
+                  ? "text-white/80 hover:bg-white/10 hover:text-white"
+                  : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+              )}
               aria-label="Shopping Cart"
             >
               <ShoppingCart className="h-5 w-5" />

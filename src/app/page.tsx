@@ -12,7 +12,6 @@ import {
   ArrowRight,
   MessageCircle,
   Clock,
-  Sparkles,
   Award,
   Leaf,
   ArrowRightLeft
@@ -23,9 +22,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ProductCard } from "@/components/ui/product-card";
+import { HeroBanner } from "@/components/layout/hero-banner";
 
 export default function Home() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
+
+  // Monitor scroll for announcement bar hiding
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Dynamic database states
   const [featuredProducts, setFeaturedProducts] = React.useState<any[]>([]);
@@ -181,7 +195,9 @@ export default function Home() {
         }}
       />
       {/* Announcement Bar */}
-      <div className="bg-neutral-950 text-white text-[11px] font-semibold tracking-widest uppercase flex items-center justify-center gap-6 h-8 fixed top-0 left-0 right-0 z-50">
+      <div className={`bg-neutral-950 text-white text-[11px] font-semibold tracking-widest uppercase flex items-center justify-center gap-6 h-8 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        isScrolled ? "-translate-y-full" : "translate-y-0"
+      }`}>
         <span>⚡ Free shipping on orders over $50</span>
         <span className="hidden sm:inline">📦 Cash on Delivery nationwide</span>
         <span className="hidden md:inline">🛡️ 2-Year official warranty</span>
@@ -191,55 +207,10 @@ export default function Home() {
       <Header />
 
       {/* Main Content (with top padding to account for sticky header) */}
-      <main className="flex-grow pt-28">
+      <main className="flex-grow pt-8">
         
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-neutral-50 px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-              
-              {/* Text Content */}
-              <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left space-y-6">
-                <Badge variant="new" className="px-3 py-1 font-semibold flex items-center gap-1.5 w-fit sm:mx-auto lg:mx-0">
-                  <Sparkles className="h-3 w-3 text-brand-primary" /> NEW ARRIVALS 2026
-                </Badge>
-                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-neutral-900 leading-none">
-                  Upgrade Your <br />
-                  <span className="text-brand-primary">Everyday Tech</span>
-                </h1>
-                <p className="text-base sm:text-lg text-neutral-500 max-w-lg leading-relaxed">
-                  Experience precision-engineered accessories designed for the modern professional. From high-fidelity audio to seamless connectivity.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                  <Link href="/shop">
-                    <Button variant="primary" className="w-full sm:w-auto h-12 px-8">
-                      Shop Now
-                    </Button>
-                  </Link>
-                  <Link href="#categories">
-                    <Button variant="outline" className="w-full sm:w-auto h-12 px-8">
-                      Explore Categories
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Graphic/Image Content */}
-              <div className="mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 flex justify-center">
-                <div className="relative w-full aspect-square max-w-[500px] rounded-custom-2xl overflow-hidden shadow-xl border border-neutral-200 bg-white">
-                  <Image
-                    src="/images/hero.png"
-                    alt="Premium tech accessories set"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
+        <HeroBanner />
 
         {/* Features Spotlight Bar / COD & Delivery bar */}
         <section className="bg-neutral-900 text-white py-6 border-y border-neutral-800">
