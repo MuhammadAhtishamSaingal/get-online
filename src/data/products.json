@@ -1,11 +1,11 @@
 [
   {
-    "_id": "6a6ed647237b313fe8f44e80",
+    "_id": "6a6fb85cd0de738581e580f8",
     "name": "SonicWave Buds Pro",
     "slug": "sonicwave-buds-pro",
     "shortDescription": "Best Active Noise Cancelling premium wireless earbuds.",
     "fullDescription": "Pristine acoustic separation meets advanced smart noise filtering. Engineered with deep carbon dynamic drivers, these custom earbuds provide up to 40dB of sound isolation, touch-swipe controls, and a total of 32 hours of play time.",
-    "category": "6a6ed647237b313fe8f44e71",
+    "category": "6a6fb85cd0de738581e580e9",
     "brand": "SonicWave",
     "basePrice": 249,
     "costPrice": 120,
@@ -66,16 +66,16 @@
         "stock": 20
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e81",
+    "_id": "6a6fb85cd0de738581e580f9",
     "name": "HyperCharge 120W GaN Adaptor",
     "slug": "hypercharge-120w-gan",
     "shortDescription": "Triple Device Super-Fast Charging station blocks.",
     "fullDescription": "Unleash high-efficiency charging power. Engineered with safe GaN (Gallium Nitride) semiconductor material, this compact adaptor offers dual USB-C ports (100W max) and an additional USB-A port, capable of charging laptops, tablets, and phones simultaneously.",
-    "category": "6a6ed647237b313fe8f44e6e",
+    "category": "6a6fb85cd0de738581e580e6",
     "brand": "HyperCharge",
     "basePrice": 79,
     "costPrice": 35,
@@ -136,16 +136,16 @@
         "stock": 25
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e82",
+    "_id": "6a6fb85cd0de738581e580fa",
     "name": "TactileAir Slim Mechanical Keyboard",
     "slug": "tactileair-slim-mechanical",
     "shortDescription": "Ultra-quiet Brown Switches wireless keyboard.",
     "fullDescription": "Premium workspace aesthetic meets responsive, comfortable typing. Constructed with a low-profile anodized aluminum case and keycaps, this mechanical keyboard offers custom quiet brown tactile switches and a long-lasting rechargeable battery.",
-    "category": "6a6ed647237b313fe8f44e77",
+    "category": "6a6fb85cd0de738581e580ef",
     "brand": "TactileAir",
     "basePrice": 189,
     "costPrice": 90,
@@ -206,16 +206,16 @@
         "stock": 12
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e83",
+    "_id": "6a6fb85cd0de738581e580fb",
     "name": "Horizon Watch Series X",
     "slug": "horizon-watch-series-x",
     "shortDescription": "Rugged smartwatch with 7-Day battery life.",
     "fullDescription": "Crafted for performance. Features an aerospace-grade titanium watch cover, scratch-resistant sapphire crystal screen, heart-rate tracking, and smart notifications. Includes a comfortable sport band.",
-    "category": "6a6ed647237b313fe8f44e73",
+    "category": "6a6fb85cd0de738581e580eb",
     "brand": "Horizon",
     "basePrice": 329,
     "compareAtPrice": 399,
@@ -277,16 +277,16 @@
         "stock": 8
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e84",
+    "_id": "6a6fb85cd0de738581e580fc",
     "name": "Precision Mouse X1",
     "slug": "precision-mouse-x1",
     "shortDescription": "Ergonomic high-precision optical tracking mouse.",
     "fullDescription": "Designed for absolute comfort and precision. The Precision Mouse X1 offers a dual Bluetooth + wireless receiver connection, customizable scroll wheel sensitivity, and custom side navigation buttons.",
-    "category": "6a6ed647237b313fe8f44e78",
+    "category": "6a6fb85cd0de738581e580f0",
     "brand": "Get Online",
     "basePrice": 89,
     "costPrice": 40,
@@ -346,16 +346,16 @@
         "stock": 15
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e85",
+    "_id": "6a6fb85cd0de738581e580fd",
     "name": "Nexus 8-in-1 USB Hub",
     "slug": "nexus-8-in-1-hub",
     "shortDescription": "Dual HDMI output, USB-C pass-through expansion dock.",
     "fullDescription": "Maximize your desktop connectivity. Instantly adds dual HDMI outputs (4K@60Hz support), 3x USB 3.0 ports, SD/MicroSD card readers, and a high-power 100W USB-C Power Delivery pass-through port.",
-    "category": "6a6ed647237b313fe8f44e76",
+    "category": "6a6fb85cd0de738581e580ee",
     "brand": "Get Online",
     "basePrice": 69,
     "costPrice": 30,
@@ -415,16 +415,16 @@
         "stock": 20
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e86",
+    "_id": "6a6fb85cd0de738581e580fe",
     "name": "ProLink 2m Braided Cable",
     "slug": "prolink-2m-braided-cable",
     "shortDescription": "100W Power Delivery certified braided design cable.",
     "fullDescription": "Built to last. The ProLink cable features double-braided nylon weave covering, reinforced metallic connectors, and internal smart e-marker chip verifying 100W safe charge transfer.",
-    "category": "6a6ed647237b313fe8f44e6f",
+    "category": "6a6fb85cd0de738581e580e7",
     "brand": "Get Online",
     "basePrice": 15,
     "costPrice": 5,
@@ -491,16 +491,16 @@
         "stock": 30
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e87",
+    "_id": "6a6fb85cd0de738581e580ff",
     "name": "VoltCase Mini Travel Shell",
     "slug": "voltcase-mini-travel-shell",
     "shortDescription": "Weatherproof hard shell tech accessories organizer case.",
     "fullDescription": "Consolidate and protect your daily items. Constructed with high-density EVA shell covering and weatherproof zippers. The internal layout features mesh organizing pockets and flexible straps.",
-    "category": "6a6ed647237b313fe8f44e7b",
+    "category": "6a6fb85cd0de738581e580f3",
     "brand": "Get Online",
     "basePrice": 25,
     "costPrice": 10,
@@ -560,16 +560,16 @@
         "stock": 25
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e88",
+    "_id": "6a6fb85cd0de738581e58100",
     "name": "BoltCharge 65W GaN Charger",
     "slug": "boltcharge-65w-gan-charger",
     "shortDescription": "Pocket-sized dual USB-C fast wall charger block.",
     "fullDescription": "High speed, minimal footprints. Up to 65W total charging output in a block no larger than a keycard. Ideal for charging laptops and phones on a tight schedule.",
-    "category": "6a6ed647237b313fe8f44e6e",
+    "category": "6a6fb85cd0de738581e580e6",
     "brand": "Get Online",
     "basePrice": 45,
     "costPrice": 18,
@@ -625,16 +625,16 @@
         "stock": 30
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e89",
+    "_id": "6a6fb85cd0de738581e58101",
     "name": "Crystal Buds AI Earphones",
     "slug": "crystal-buds-ai-earphones",
     "shortDescription": "Smart Ambient Mode earbuds with translation features.",
     "fullDescription": "Pristine acoustic fidelity boosted by edge-AI algorithms. Features crystal-clear ambient pass-through, real-time audio translation assistance, and a design profile that seals comfortably in the ear canal.",
-    "category": "6a6ed647237b313fe8f44e71",
+    "category": "6a6fb85cd0de738581e580e9",
     "brand": "Get Online",
     "basePrice": 199,
     "costPrice": 85,
@@ -691,16 +691,16 @@
         "stock": 15
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e8a",
+    "_id": "6a6fb85cd0de738581e58102",
     "name": "Titan Keyboard Pro",
     "slug": "titan-keyboard-pro",
     "shortDescription": "Full layout heavy duty aluminum mechanical keyboard.",
     "fullDescription": "The ultimate typing battle station. Formed from solid CNC-machined aluminum with custom dual-shot keycaps, hot-swappable tactile linear red switches, and full RGB backlighting.",
-    "category": "6a6ed647237b313fe8f44e77",
+    "category": "6a6fb85cd0de738581e580ef",
     "brand": "Get Online",
     "basePrice": 229,
     "costPrice": 110,
@@ -754,16 +754,16 @@
         "stock": 25
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e8b",
+    "_id": "6a6fb85cd0de738581e58103",
     "name": "GridMouse Pro Wireless",
     "slug": "gridmouse-pro-wireless",
     "shortDescription": "Ultralight weight multi-device connection mouse.",
     "fullDescription": "Shed weight, keep absolute control. The GridMouse Pro weighs only 62 grams, featuring zero-lag latency, up to 26000 DPI sensors, and dual-mode high-polling-rate connections.",
-    "category": "6a6ed647237b313fe8f44e78",
+    "category": "6a6fb85cd0de738581e580f0",
     "brand": "Get Online",
     "basePrice": 89,
     "costPrice": 38,
@@ -824,7 +824,7 @@
         "stock": 15
       }
     ],
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   }
 ]

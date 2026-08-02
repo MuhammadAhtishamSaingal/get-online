@@ -1,162 +1,162 @@
 [
   {
-    "_id": "6a6ed647237b313fe8f44e6a",
+    "_id": "6a6fb85cd0de738581e580e2",
     "name": "Mobile Accessories",
     "slug": "mobile-accessories",
     "order": 1,
-    "createdAt": "2026-08-02T05:31:51.841Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.099Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e6b",
+    "_id": "6a6fb85cd0de738581e580e3",
     "name": "Computer Accessories",
     "slug": "computer-accessories",
     "order": 2,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e6c",
+    "_id": "6a6fb85cd0de738581e580e4",
     "name": "Laptop Accessories",
     "slug": "laptop-accessories",
     "order": 3,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e6d",
+    "_id": "6a6fb85cd0de738581e580e5",
     "name": "Desktop Accessories",
     "slug": "desktop-accessories",
     "order": 4,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e6e",
+    "_id": "6a6fb85cd0de738581e580e6",
     "name": "Chargers",
     "slug": "chargers",
     "order": 5,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e6f",
+    "_id": "6a6fb85cd0de738581e580e7",
     "name": "Charging Cables",
     "slug": "charging-cables",
     "order": 6,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e70",
+    "_id": "6a6fb85cd0de738581e580e8",
     "name": "Power Banks",
     "slug": "power-banks",
     "order": 7,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e71",
+    "_id": "6a6fb85cd0de738581e580e9",
     "name": "Earbuds",
     "slug": "earbuds",
     "order": 8,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e72",
+    "_id": "6a6fb85cd0de738581e580ea",
     "name": "Headphones",
     "slug": "headphones",
     "order": 9,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e73",
+    "_id": "6a6fb85cd0de738581e580eb",
     "name": "Smartwatches",
     "slug": "smartwatches",
     "order": 10,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.842Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e74",
+    "_id": "6a6fb85cd0de738581e580ec",
     "name": "Phone Cases",
     "slug": "phone-cases",
     "order": 11,
-    "createdAt": "2026-08-02T05:31:51.842Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e75",
+    "_id": "6a6fb85cd0de738581e580ed",
     "name": "Screen Protectors",
     "slug": "screen-protectors",
     "order": 12,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e76",
+    "_id": "6a6fb85cd0de738581e580ee",
     "name": "USB Hubs",
     "slug": "usb-hubs",
     "order": 13,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e77",
+    "_id": "6a6fb85cd0de738581e580ef",
     "name": "Keyboards",
     "slug": "keyboards",
     "order": 14,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e78",
+    "_id": "6a6fb85cd0de738581e580f0",
     "name": "Mice",
     "slug": "mice",
     "order": 15,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e79",
+    "_id": "6a6fb85cd0de738581e580f1",
     "name": "Gaming Accessories",
     "slug": "gaming-accessories",
     "order": 16,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e7a",
+    "_id": "6a6fb85cd0de738581e580f2",
     "name": "Car Accessories",
     "slug": "car-accessories",
     "order": 17,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e7b",
+    "_id": "6a6fb85cd0de738581e580f3",
     "name": "Storage Devices",
     "slug": "storage-devices",
     "order": 18,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e7c",
+    "_id": "6a6fb85cd0de738581e580f4",
     "name": "Smart Gadgets",
     "slug": "smart-gadgets",
     "order": 19,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   },
   {
-    "_id": "6a6ed647237b313fe8f44e7d",
+    "_id": "6a6fb85cd0de738581e580f5",
     "name": "Everyday Essentials",
     "slug": "everyday-essentials",
     "order": 20,
-    "createdAt": "2026-08-02T05:31:51.843Z",
-    "updatedAt": "2026-08-02T05:31:51.843Z"
+    "createdAt": "2026-08-02T21:36:28.100Z",
+    "updatedAt": "2026-08-02T21:36:28.100Z"
   }
 ]

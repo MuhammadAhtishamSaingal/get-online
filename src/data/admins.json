@@ -1,11 +1,11 @@
 [
   {
-    "_id": "6a6ed647237b313fe8f44e7e",
+    "_id": "6a6fb85cd0de738581e580f6",
     "email": "rehanmuhammad546@gmail.com",
-    "passwordHash": "$2b$10$GOdqaspeyZdbz7KlO6KAOe9KMkV3J66h114RxgxKnLYDFL7Csl0T.",
+    "passwordHash": "$2b$10$iQesQAtqytXcrBW8us2UOurJJtWwhU2xEQSWjBzqURyaxUp.SMMfe",
     "name": "Store Administrator",
     "role": "superadmin",
-    "createdAt": "2026-08-02T05:31:51.949Z",
-    "updatedAt": "2026-08-02T05:31:51.949Z"
+    "createdAt": "2026-08-02T21:36:28.292Z",
+    "updatedAt": "2026-08-02T21:36:28.292Z"
   }
 ]
