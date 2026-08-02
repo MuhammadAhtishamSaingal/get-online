@@ -300,7 +300,10 @@ export function Header() {
             : "bg-white border-neutral-200/60 shadow-sm"
         )}
       >
-        <div className="w-full flex h-16 items-center justify-between px-6 sm:px-10 lg:px-16">
+        <div className={cn(
+          "w-full flex items-center justify-between px-6 sm:px-10 lg:px-16 transition-all duration-300",
+          isScrolled ? "h-20" : "h-24"
+        )}>
           {/* Mobile hamburger menu */}
           <div className="flex lg:hidden">
             <button
@@ -321,15 +324,19 @@ export function Header() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className={cn(
-                "font-display text-xl font-bold tracking-tight flex items-center gap-1.5 focus-visible:outline-none transition-colors duration-300",
-                isTransparentActive ? "text-white" : "text-neutral-900"
-              )}
+              className="focus-visible:outline-none block"
             >
-              <span className="h-6 w-6 rounded-custom-sm bg-brand-primary flex items-center justify-center text-white text-xs font-black">
-                G
-              </span>
-              <span>GizmoGrid</span>
+              <Image
+                src={isTransparentActive ? "/images/logo-light-text.png" : "/images/logo-dark-text.png"}
+                alt="Get Online Logo"
+                width={164}
+                height={119}
+                className={cn(
+                  "w-auto object-contain transition-all duration-300",
+                  isScrolled ? "h-[56px]" : "h-[76px]"
+                )}
+                priority
+              />
             </Link>
           </div>
 
@@ -489,7 +496,7 @@ export function Header() {
               : "opacity-0 -translate-y-2 scale-y-95 pointer-events-none"
           )}
           style={{
-            top: "64px", // Pinned exactly at bottom boundary of header container at all times
+            top: isScrolled ? "80px" : "96px", // Pinned exactly at bottom boundary of header container at all times
           }}
         >
           {activeMenu && (

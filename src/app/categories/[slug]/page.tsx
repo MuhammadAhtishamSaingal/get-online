@@ -62,7 +62,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     return (
       <>
         <Header />
-        <div className="h-28" />
+        <div className="h-[140px]" />
         <main className="mx-auto max-w-7xl px-4 py-20 text-center flex-grow">
           <h2 className="font-display text-2xl font-bold text-neutral-900 mb-2">Category Not Found</h2>
           <p className="text-sm text-neutral-500 mb-6">Sorry, we couldn't find the category you're looking for.</p>
@@ -85,7 +85,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const defaultParallax = {
     backgroundImage: "/images/parallax-home.png",
     headline: `Modern ${category.name} Gear`,
-    description: `Enhance your digital workspace with GizmoGrid's premium selection of design-forward, engineered products tailored for the ${category.name} collection.`,
+    description: `Enhance your digital workspace with Get Online's premium selection of design-forward, engineered products tailored for the ${category.name} collection.`,
     ctaText: "View Collection",
     ctaLink: `/shop?category=${category.slug}`
   };
@@ -95,7 +95,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <>
       <Header />
-      <div className="h-28" />
+      <div className="h-[140px]" />
 
       {/* Top Breadcrumb & Title (Constrained width) */}
       <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8 w-full">

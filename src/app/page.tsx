@@ -105,7 +105,7 @@ export default function Home() {
     {
       name: "Sarah M.",
       role: "Creative Director",
-      content: "GizmoGrid's GaN charger is a game-changer for travel. I can charge my MacBook Pro, iPad, and iPhone simultaneously with one brick.",
+      content: "Get Online's GaN charger is a game-changer for travel. I can charge my MacBook Pro, iPad, and iPhone simultaneously with one brick.",
       rating: 5
     },
     {
@@ -123,7 +123,7 @@ export default function Home() {
     },
     {
       question: "What is your warranty policy?",
-      answer: "We offer a 2-year official GizmoGrid warranty on all chargers, hubs, and electronic gadgets. Cables and cases carry a 1-year warranty."
+      answer: "We offer a 2-year official Get Online warranty on all chargers, hubs, and electronic gadgets. Cables and cases carry a 1-year warranty."
     },
     {
       question: "How long does shipping take?",
@@ -715,7 +715,7 @@ export default function Home() {
                 Trusted by Innovators
               </h2>
               <p className="text-sm text-neutral-500">
-                Here is what creative professionals and developers say about GizmoGrid.
+                Here is what creative professionals and developers say about Get Online.
               </p>
             </div>
 

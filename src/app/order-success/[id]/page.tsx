@@ -22,7 +22,7 @@ export default async function OrderSuccessPage({ params }: PageProps) {
     return (
       <>
         <Header />
-        <main className="pt-32 pb-20 px-4 text-center max-w-md mx-auto">
+        <main className="pt-40 pb-20 px-4 text-center max-w-md mx-auto">
           <h2 className="font-display text-xl font-bold text-neutral-900">Order Not Found</h2>
           <p className="text-xs text-neutral-500 mt-2">
             The transaction ID does not map to any active records in our system.
@@ -42,7 +42,7 @@ export default async function OrderSuccessPage({ params }: PageProps) {
     <>
       <Header />
 
-      <main className="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
+      <main className="flex-grow pt-40 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
         <div className="max-w-3xl mx-auto space-y-8 animate-slide-up">
           
           {/* Header Banner Success Card */}

@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 import { jwtVerify } from "jose";
 
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "gizmogrid-super-secret-key-987654321"
+  process.env.JWT_SECRET || "getonline-super-secret-key-987654321"
 );
 
 export async function middleware(request: NextRequest) {
@@ -16,7 +16,7 @@ export async function middleware(request: NextRequest) {
       return NextResponse.next();
     }
 
-    const token = request.cookies.get("gizmogrid_admin_token")?.value;
+    const token = request.cookies.get("getonline_admin_token")?.value;
 
     if (!token) {
       const loginUrl = new URL("/admin/login", request.url);
@@ -30,7 +30,7 @@ export async function middleware(request: NextRequest) {
     } catch {
       const loginUrl = new URL("/admin/login", request.url);
       const response = NextResponse.redirect(loginUrl);
-      response.cookies.delete("gizmogrid_admin_token");
+      response.cookies.delete("getonline_admin_token");
       return response;
     }
   }

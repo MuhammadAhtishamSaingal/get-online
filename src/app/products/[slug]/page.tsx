@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   if (!product) {
     return {
-      title: "Product Not Found | GizmoGrid",
-      description: "GizmoGrid tech and lifestyle accessories store.",
+      title: "Product Not Found | Get Online",
+      description: "Get Online tech and lifestyle accessories store.",
     };
   }
 
-  const title = `${product.seoTitle || product.name} | GizmoGrid`;
+  const title = `${product.seoTitle || product.name} | Get Online`;
   const description = product.seoDescription || product.shortDescription;
   const pageUrl = `${baseUrl}/products/${product.slug}`;
   const imageUrl = product.images?.[0]?.url ? `${baseUrl}${product.images[0].url}` : `${baseUrl}/images/hero.png`;
@@ -70,7 +70,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     return (
       <>
         <Header />
-        <div className="h-28" />
+        <div className="h-[140px]" />
         <main className="mx-auto max-w-7xl px-4 py-20 text-center flex-grow">
           <h2 className="font-display text-2xl font-bold text-neutral-900 mb-2">
             Product Not Found
@@ -120,7 +120,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             "sku": product.SKU || "GG-SKU",
             "brand": {
               "@type": "Brand",
-              "name": product.brand || "GizmoGrid"
+              "name": product.brand || "Get Online"
             },
             "offers": {
               "@type": "Offer",
@@ -168,7 +168,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       )}
 
       <Header />
-      <div className="h-28" />
+      <div className="h-[140px]" />
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 flex-grow w-full">
         {/* Navigation Breadcrumb */}

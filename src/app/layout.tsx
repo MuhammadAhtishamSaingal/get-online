@@ -16,25 +16,25 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
   title: {
-    default: "GizmoGrid | Premium Tech & Lifestyle Accessories",
-    template: "%s | GizmoGrid",
+    default: "Get Online | Premium Tech & Lifestyle Accessories",
+    template: "%s | Get Online",
   },
-  description: "Shop premium design-forward mobile accessories, computer accessories, charging gadgets, and everyday lifestyle essentials at GizmoGrid.",
+  description: "Shop premium design-forward mobile accessories, computer accessories, charging gadgets, and everyday lifestyle essentials at Get Online.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "GizmoGrid | Premium Tech & Lifestyle Accessories",
-    description: "Shop premium design-forward mobile accessories, computer accessories, charging gadgets, and everyday lifestyle essentials at GizmoGrid.",
+    title: "Get Online | Premium Tech & Lifestyle Accessories",
+    description: "Shop premium design-forward mobile accessories, computer accessories, charging gadgets, and everyday lifestyle essentials at Get Online.",
     url: "/",
-    siteName: "GizmoGrid",
+    siteName: "Get Online",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GizmoGrid | Premium Tech & Lifestyle Accessories",
-    description: "Shop premium design-forward mobile accessories, computer accessories, charging gadgets, and everyday lifestyle essentials at GizmoGrid.",
+    title: "Get Online | Premium Tech & Lifestyle Accessories",
+    description: "Shop premium design-forward mobile accessories, computer accessories, charging gadgets, and everyday lifestyle essentials at Get Online.",
   },
 };
 

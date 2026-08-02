@@ -73,7 +73,7 @@ async function seed() {
   }
 
   // Hash Admin details
-  const adminEmail = "admin@gizmogrid.com";
+  const adminEmail = "rehanmuhammad546@gmail.com";
   const adminPassword = "admin123";
   const passwordHash = bcrypt.hashSync(adminPassword, 10);
   const adminDoc = {
@@ -94,8 +94,8 @@ async function seed() {
     freeShippingThreshold: 50,
     vatRate: 0,
     contactPhone: "+92 300 1234567",
-    contactEmail: "support@gizmogrid.com",
-    address: "GizmoGrid HQ, Lahore, Pakistan",
+    contactEmail: "rehanmuhammad546@gmail.com",
+    address: "Get Online HQ, Lahore, Pakistan",
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
@@ -126,7 +126,7 @@ async function seed() {
       ],
       features: ["Active Noise Cancellation (ANC)", "Wireless Qi Charging", "IPX5 Water Resistant"],
       compatibilityInfo: "All Bluetooth-enabled devices (iOS, Android, macOS, Windows)",
-      warrantyInfo: "2-Year official GizmoGrid warranty",
+      warrantyInfo: "2-Year official Get Online warranty",
       shippingInfo: "Ships within 24 hours. COD available.",
       images: [{ url: "/images/prod-buds.png", publicId: "prod_buds", order: 0 }],
       variants: [
@@ -158,7 +158,7 @@ async function seed() {
       ],
       features: ["GaN Fast Charge Tech", "Over-current protection", "Foldable plug design"],
       compatibilityInfo: "MacBook Pro, iPad Pro, iPhone, Samsung Galaxy, and other USB-C laptops",
-      warrantyInfo: "2-Year official GizmoGrid warranty",
+      warrantyInfo: "2-Year official Get Online warranty",
       shippingInfo: "Ships in robust packaging. COD available.",
       images: [{ url: "/images/gan-charger.png", publicId: "gan_charger", order: 0 }],
       variants: [
@@ -190,7 +190,7 @@ async function seed() {
       ],
       features: ["Multi-device Bluetooth connection", "USB-C wired option", "Aluminum chassis"],
       compatibilityInfo: "macOS, Windows, iOS, Android, iPadOS",
-      warrantyInfo: "2-Year official GizmoGrid warranty",
+      warrantyInfo: "2-Year official Get Online warranty",
       shippingInfo: "Ships in design-forward packaging.",
       images: [{ url: "/images/prod-keyboard.png", publicId: "prod_keyboard", order: 0 }],
       variants: [
@@ -237,7 +237,7 @@ async function seed() {
       shortDescription: "Ergonomic high-precision optical tracking mouse.",
       fullDescription: "Designed for absolute comfort and precision. The Precision Mouse X1 offers a dual Bluetooth + wireless receiver connection, customizable scroll wheel sensitivity, and custom side navigation buttons.",
       category: categoriesMap["mice"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 89,
       costPrice: 40,
       SKU: "GG-GG-MOUSE-X1",
@@ -268,7 +268,7 @@ async function seed() {
       shortDescription: "Dual HDMI output, USB-C pass-through expansion dock.",
       fullDescription: "Maximize your desktop connectivity. Instantly adds dual HDMI outputs (4K@60Hz support), 3x USB 3.0 ports, SD/MicroSD card readers, and a high-power 100W USB-C Power Delivery pass-through port.",
       category: categoriesMap["usb-hubs"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 69,
       costPrice: 30,
       SKU: "GG-GG-HUB-NEXUS",
@@ -299,7 +299,7 @@ async function seed() {
       shortDescription: "100W Power Delivery certified braided design cable.",
       fullDescription: "Built to last. The ProLink cable features double-braided nylon weave covering, reinforced metallic connectors, and internal smart e-marker chip verifying 100W safe charge transfer.",
       category: categoriesMap["charging-cables"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 15,
       costPrice: 5,
       SKU: "GG-GG-CBL-PROLINK",
@@ -331,7 +331,7 @@ async function seed() {
       shortDescription: "Weatherproof hard shell tech accessories organizer case.",
       fullDescription: "Consolidate and protect your daily items. Constructed with high-density EVA shell covering and weatherproof zippers. The internal layout features mesh organizing pockets and flexible straps.",
       category: categoriesMap["storage-devices"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 25,
       costPrice: 10,
       SKU: "GG-GG-CASE-VOLT",
@@ -362,7 +362,7 @@ async function seed() {
       shortDescription: "Pocket-sized dual USB-C fast wall charger block.",
       fullDescription: "High speed, minimal footprints. Up to 65W total charging output in a block no larger than a keycard. Ideal for charging laptops and phones on a tight schedule.",
       category: categoriesMap["chargers"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 45,
       costPrice: 18,
       SKU: "GG-BC-65W-GAN",
@@ -392,7 +392,7 @@ async function seed() {
       shortDescription: "Smart Ambient Mode earbuds with translation features.",
       fullDescription: "Pristine acoustic fidelity boosted by edge-AI algorithms. Features crystal-clear ambient pass-through, real-time audio translation assistance, and a design profile that seals comfortably in the ear canal.",
       category: categoriesMap["earbuds"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 199,
       costPrice: 85,
       SKU: "GG-CR-BUDS-AI",
@@ -422,7 +422,7 @@ async function seed() {
       shortDescription: "Full layout heavy duty aluminum mechanical keyboard.",
       fullDescription: "The ultimate typing battle station. Formed from solid CNC-machined aluminum with custom dual-shot keycaps, hot-swappable tactile linear red switches, and full RGB backlighting.",
       category: categoriesMap["keyboards"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 229,
       costPrice: 110,
       SKU: "GG-TT-KEY-PRO",
@@ -452,7 +452,7 @@ async function seed() {
       shortDescription: "Ultralight weight multi-device connection mouse.",
       fullDescription: "Shed weight, keep absolute control. The GridMouse Pro weighs only 62 grams, featuring zero-lag latency, up to 26000 DPI sensors, and dual-mode high-polling-rate connections.",
       category: categoriesMap["mice"],
-      brand: "GizmoGrid",
+      brand: "Get Online",
       basePrice: 89,
       costPrice: 38,
       SKU: "GG-GM-PRO-WIRELESS",

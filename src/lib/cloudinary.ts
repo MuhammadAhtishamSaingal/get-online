@@ -26,7 +26,7 @@ export interface UploadResult {
 export async function uploadImage(
   fileBuffer: Buffer,
   fileName: string,
-  folder: string = "gizmogrid_products"
+  folder: string = "getonline_products"
 ): Promise<UploadResult> {
   if (isCloudinaryConfigured) {
     return new Promise((resolve, reject) => {

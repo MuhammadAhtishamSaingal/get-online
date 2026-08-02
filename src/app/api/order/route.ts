@@ -14,7 +14,7 @@ import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 
 async function isAuthorized() {
   const cookieStore = await cookies();
-  const token = cookieStore.get("gizmogrid_admin_token")?.value;
+  const token = cookieStore.get("getonline_admin_token")?.value;
   if (!token) return false;
   const decoded = await verifyJWT(token);
   return !!decoded;

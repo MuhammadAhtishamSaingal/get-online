@@ -233,7 +233,7 @@ export default function CheckoutPage() {
     return (
       <>
         <Header />
-        <main className="pt-32 pb-20 text-center text-xs text-neutral-400">
+        <main className="pt-40 pb-20 text-center text-xs text-neutral-400">
           Loading checkout checkout validations...
         </main>
         <Footer />
@@ -245,7 +245,7 @@ export default function CheckoutPage() {
     <>
       <Header />
       
-      <main className="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
+      <main className="flex-grow pt-40 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
         <div className="max-w-7xl mx-auto">
           {/* Back button */}
           <div className="mb-6">
@@ -480,7 +480,7 @@ export default function CheckoutPage() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                         <div>
                           <p className="font-bold text-neutral-800">Bank Transfer (HBL):</p>
-                          <p className="mt-0.5">Title: GizmoGrid Store</p>
+                          <p className="mt-0.5">Title: Get Online Store</p>
                           <p>Account: 1234-5678-9012-34</p>
                         </div>
                         <div>

@@ -1,6 +1,6 @@
-# GizmoGrid | Premium Tech & Lifestyle Accessories Store
+# Get Online | Premium Tech & Lifestyle Accessories Store
 
-GizmoGrid is a high-performance, responsive e-commerce application built on Next.js 16 (App Router), styled with Vanilla CSS, and backed by a MongoDB database cluster. It features an administrative control panel, a secure dynamic shopping cart, discount coupon codes validation, automated email notifications, and real-time customer package tracking.
+Get Online is a high-performance, responsive e-commerce application built on Next.js 16 (App Router), styled with Vanilla CSS, and backed by a MongoDB database cluster. It features an administrative control panel, a secure dynamic shopping cart, discount coupon codes validation, automated email notifications, and real-time customer package tracking.
 
 ---
 
@@ -35,9 +35,9 @@ CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 EMAIL_USER=your_gmail_address@gmail.com
 EMAIL_APP_PASSWORD=your_gmail_app_specific_password
-ORDER_NOTIFICATION_EMAIL=admin_notifications@gizmogrid.com
+ORDER_NOTIFICATION_EMAIL=rehanmuhammad546@gmail.com
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-ADMIN_EMAIL=admin@gizmogrid.com
+ADMIN_EMAIL=rehanmuhammad546@gmail.com
 ADMIN_PASSWORD_HASH=your_admin_hashed_password
 ```
 
@@ -47,7 +47,7 @@ Run the database seed script to clear previous collections and populate categori
 npx tsx src/scripts/seed.ts
 ```
 **Default Admin Credentials**:
-* **Email**: `admin@gizmogrid.com`
+* **Email**: `rehanmuhammad546@gmail.com`
 * **Password**: `admin123`
 
 ### 5. Running the Application
@@ -76,7 +76,7 @@ If you want to support administrative image uploads:
 ### Nodemailer / SMTP Setup
 Automated invoice dispatches are configured via SMTP:
 1. Log into your Google Account, navigate to **Security** settings, and enable **2-Step Verification**.
-2. Under **App Passwords**, generate a new application-specific password (e.g., name it "GizmoGrid Store").
+2. Under **App Passwords**, generate a new application-specific password (e.g., name it "Get Online Store").
 3. Set `EMAIL_USER` to your Gmail address and `EMAIL_APP_PASSWORD` to the 16-character code Google generated.
 4. If left blank, emails will fallback to logging mock HTML outputs to the terminal console during local testing.
 

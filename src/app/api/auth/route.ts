@@ -9,7 +9,7 @@ import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 export async function GET() {
   try {
     const cookieStore = await cookies();
-    const token = cookieStore.get("gizmogrid_admin_token")?.value;
+    const token = cookieStore.get("getonline_admin_token")?.value;
 
     if (!token) {
       return NextResponse.json({ authenticated: false }, { status: 200 });
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     if (action === "logout") {
       const response = NextResponse.json({ success: true });
       const cookieStore = await cookies();
-      cookieStore.delete("gizmogrid_admin_token");
+      cookieStore.delete("getonline_admin_token");
       return response;
     }
 
@@ -80,7 +80,7 @@ export async function POST(request: Request) {
     });
 
     const cookieStore = await cookies();
-    cookieStore.set("gizmogrid_admin_token", token, {
+    cookieStore.set("getonline_admin_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
@@ -98,7 +98,7 @@ export async function DELETE() {
   try {
     const response = NextResponse.json({ success: true });
     const cookieStore = await cookies();
-    cookieStore.delete("gizmogrid_admin_token");
+    cookieStore.delete("getonline_admin_token");
     return response;
   } catch (err) {
     return NextResponse.json({ error: (err as any).message }, { status: 500 });

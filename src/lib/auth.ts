@@ -1,7 +1,7 @@
 import { SignJWT, jwtVerify } from "jose";
 
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "gizmogrid-super-secret-key-987654321"
+  process.env.JWT_SECRET || "getonline-super-secret-key-987654321"
 );
 
 export interface AdminJWTPayload {

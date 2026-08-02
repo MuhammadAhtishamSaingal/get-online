@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useToast } from "@/components/ui/toast";
 import {
@@ -88,9 +89,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:flex-shrink-0 bg-neutral-900 text-white border-r border-neutral-800">
         {/* Sidebar Brand Header */}
         <div className="h-16 px-6 border-b border-neutral-800 flex items-center justify-between">
-          <Link href="/admin/dashboard" className="font-display text-lg font-black tracking-tight text-white flex items-center gap-1.5">
-            <span className="bg-brand-primary h-2 w-2 rounded-full" />
-            GizmoGrid <span className="text-[10px] text-brand-primary font-bold uppercase tracking-wide bg-brand-primary/10 px-1.5 py-0.5 rounded-custom-md border border-brand-primary/20">Admin</span>
+          <Link href="/admin/dashboard" className="flex items-center gap-2 focus-visible:outline-none">
+            <Image
+              src="/images/logo-light-text.png"
+              alt="Get Online Logo"
+              width={164}
+              height={119}
+              className="h-9 w-auto object-contain"
+            />
+            <span className="text-[10px] text-brand-primary font-bold uppercase tracking-wide bg-brand-primary/10 px-1.5 py-0.5 rounded-custom-md border border-brand-primary/20">Admin</span>
           </Link>
         </div>
 
@@ -151,8 +158,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             </button>
 
             {/* Logo */}
-            <div className="h-16 px-6 border-b border-neutral-800 flex items-center">
-              <span className="font-display text-lg font-black text-white">GizmoGrid Admin</span>
+             <div className="h-16 px-6 border-b border-neutral-800 flex items-center">
+              <Image
+                src="/images/logo-light-text.png"
+                alt="Get Online Logo"
+                width={164}
+                height={119}
+                className="h-9 w-auto object-contain"
+              />
+              <span className="text-[10px] text-brand-primary font-bold uppercase tracking-wide bg-brand-primary/10 px-1.5 py-0.5 rounded-custom-md border border-brand-primary/20 ml-2">Admin</span>
             </div>
 
             {/* Links */}
@@ -208,7 +222,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               <Menu className="h-5 w-5" />
             </button>
             <h2 className="text-sm font-bold text-neutral-800 tracking-tight block lg:hidden">
-              GizmoGrid Admin Panel
+              Get Online Admin Panel
             </h2>
           </div>
 

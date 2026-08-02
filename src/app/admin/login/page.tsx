@@ -75,7 +75,7 @@ export default function AdminLoginPage() {
 
         {/* Headings */}
         <h1 className="font-display text-2xl font-black text-white tracking-tight mb-1 text-center">
-          GizmoGrid Command
+          Get Online Command
         </h1>
         <p className="text-xs text-neutral-400 font-medium mb-8 text-center uppercase tracking-wider">
           Store Management Console
@@ -97,7 +97,7 @@ export default function AdminLoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@gizmogrid.com"
+                placeholder="rehanmuhammad546@gmail.com"
                 className="w-full h-11 text-xs rounded-custom-xl border border-white/10 bg-white/[0.05] pl-10 pr-4 text-white placeholder-neutral-500 focus:border-brand-primary focus:bg-white/[0.08] focus:outline-none transition-all"
               />
             </div>

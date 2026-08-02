@@ -84,7 +84,7 @@ export default function TrackingPage() {
     <>
       <Header />
 
-      <main className="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
+      <main className="flex-grow pt-40 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
         <div className="max-w-3xl mx-auto space-y-8">
           
           {/* Tracking Form card */}
@@ -173,7 +173,7 @@ export default function TrackingPage() {
                     <div>
                       <h4 className="font-bold text-neutral-900">Order Cancelled</h4>
                       <p className="mt-1 text-neutral-500 leading-relaxed">
-                        This order has been cancelled. For refunds, stock queries, or re-orders, please reach out to our team at support@gizmogrid.com.
+                        This order has been cancelled. For refunds, stock queries, or re-orders, please reach out to our team at rehanmuhammad546@gmail.com.
                       </p>
                     </div>
                   </div>

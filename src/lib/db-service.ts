@@ -156,8 +156,8 @@ export const DbService = {
       freeShippingThreshold: 50,
       vatRate: 0,
       contactPhone: "+92 300 1234567",
-      contactEmail: "support@gizmogrid.com",
-      address: "GizmoGrid HQ, Lahore, Pakistan",
+      contactEmail: "rehanmuhammad546@gmail.com",
+      address: "Get Online HQ, Lahore, Pakistan",
     };
   },
 

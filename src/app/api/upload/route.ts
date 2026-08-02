@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   try {
     // 1. Authorize user is admin
     const cookieStore = await cookies();
-    const token = cookieStore.get("gizmogrid_admin_token")?.value;
+    const token = cookieStore.get("getonline_admin_token")?.value;
     if (!token) {
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
     }

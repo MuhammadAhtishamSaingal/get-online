@@ -130,8 +130,8 @@ export function OrderDetailClient({ order: initialOrder }: OrderDetailClientProp
           {/* Slip Header (visible during print only) */}
           <div className="hidden print:flex items-center justify-between border-b border-neutral-200 pb-5 mb-5">
             <div>
-              <h2 className="font-display text-lg font-black text-neutral-900 tracking-tight">GizmoGrid Store</h2>
-              <p className="text-[10px] text-neutral-500 mt-0.5">GizmoGrid Store - Premium Accessories</p>
+              <h2 className="font-display text-lg font-black text-neutral-900 tracking-tight">Get Online Store</h2>
+              <p className="text-[10px] text-neutral-500 mt-0.5">Get Online Store - Premium Accessories</p>
             </div>
             <div className="text-right">
               <h3 className="font-mono text-sm font-bold text-neutral-900">{order.orderNumber}</h3>

@@ -19,7 +19,7 @@ function getTransporter() {
 }
 
 export async function sendAdminOrderEmail(order: any): Promise<boolean> {
-  const adminEmail = process.env.ORDER_NOTIFICATION_EMAIL || "admin@gizmogrid.com";
+  const adminEmail = process.env.ORDER_NOTIFICATION_EMAIL || "rehanmuhammad546@gmail.com";
   const transporter = getTransporter();
 
   const itemsList = order.items
@@ -31,8 +31,8 @@ export async function sendAdminOrderEmail(order: any): Promise<boolean> {
 
   const emailHtml = `
     <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee;">
-      <h2 style="color: #2563eb; font-weight: 800;">GizmoGrid Order Alert</h2>
-      <p>A new order has been received on GizmoGrid.</p>
+      <h2 style="color: #2563eb; font-weight: 800;">Get Online Order Alert</h2>
+      <p>A new order has been received on Get Online.</p>
       
       <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
         <tr style="background: #f9fafb;">
@@ -87,7 +87,7 @@ export async function sendAdminOrderEmail(order: any): Promise<boolean> {
 
   try {
     await transporter.sendMail({
-      from: `"GizmoGrid Store" <${process.env.EMAIL_USER}>`,
+      from: `"Get Online Store" <${process.env.EMAIL_USER}>`,
       to: adminEmail,
       subject: `[Order Alert] New Order ${order.orderNumber} - $${order.total.toFixed(2)}`,
       html: emailHtml,
@@ -112,7 +112,7 @@ export async function sendCustomerOrderConfirmation(order: any): Promise<boolean
 
   const emailHtml = `
     <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee;">
-      <h2 style="color: #2563eb; font-weight: 800; text-align: center;">GizmoGrid</h2>
+      <h2 style="color: #2563eb; font-weight: 800; text-align: center;">Get Online</h2>
       <p style="text-align: center; font-size: 16px;">Thank you for your order, <strong>${order.customerInfo.name}</strong>!</p>
       <p>We are packing your items and will dispatch them shortly. Here is your transaction invoice summary.</p>
       
@@ -136,7 +136,7 @@ export async function sendCustomerOrderConfirmation(order: any): Promise<boolean
       </div>
 
       <p style="margin-top: 30px; font-size: 12px; color: #666; text-align: center;">
-        If you have any questions, reply directly to this email or reach us at support@gizmogrid.com.
+        If you have any questions, reply directly to this email or reach us at rehanmuhammad546@gmail.com.
       </p>
     </div>
   `;
@@ -144,16 +144,16 @@ export async function sendCustomerOrderConfirmation(order: any): Promise<boolean
   if (!transporter) {
     console.log("=== MOCK CUSTOMER CONFIRMATION EMAIL ===");
     console.log(`To: ${order.customerInfo.email}`);
-    console.log(`Subject: GizmoGrid Order Confirmation - ${order.orderNumber}`);
+    console.log(`Subject: Get Online Order Confirmation - ${order.orderNumber}`);
     console.log(emailHtml.replace(/<[^>]*>/g, ""));
     return true;
   }
 
   try {
     await transporter.sendMail({
-      from: `"GizmoGrid Store" <${process.env.EMAIL_USER}>`,
+      from: `"Get Online Store" <${process.env.EMAIL_USER}>`,
       to: order.customerInfo.email,
-      subject: `GizmoGrid Order Confirmation - ${order.orderNumber}`,
+      subject: `Get Online Order Confirmation - ${order.orderNumber}`,
       html: emailHtml,
     });
     return true;
@@ -169,7 +169,7 @@ export async function sendOrderStatusEmail(order: any): Promise<boolean> {
 
   const emailHtml = `
     <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee;">
-      <h2 style="color: #2563eb; font-weight: 800; text-align: center;">GizmoGrid</h2>
+      <h2 style="color: #2563eb; font-weight: 800; text-align: center;">Get Online</h2>
       <p style="font-size: 16px;">Hello <strong>${order.customerInfo.name}</strong>,</p>
       <p>The status of your order <strong>${order.orderNumber}</strong> has been updated to:</p>
       
@@ -184,7 +184,7 @@ export async function sendOrderStatusEmail(order: any): Promise<boolean> {
       }
 
       <p style="margin-top: 30px; font-size: 12px; color: #666; text-align: center;">
-        If you have questions regarding shipment logs, contact support@gizmogrid.com.
+        If you have questions regarding shipment logs, contact rehanmuhammad546@gmail.com.
       </p>
     </div>
   `;
@@ -199,7 +199,7 @@ export async function sendOrderStatusEmail(order: any): Promise<boolean> {
 
   try {
     await transporter.sendMail({
-      from: `"GizmoGrid Store" <${process.env.EMAIL_USER}>`,
+      from: `"Get Online Store" <${process.env.EMAIL_USER}>`,
       to: order.customerInfo.email,
       subject: `Order ${order.orderNumber} Status Update: ${order.orderStatus}`,
       html: emailHtml,

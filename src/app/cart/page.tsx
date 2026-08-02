@@ -35,7 +35,7 @@ export default function CartPage() {
     <>
       <Header />
       
-      <main className="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
+      <main className="flex-grow pt-40 pb-20 px-4 sm:px-6 lg:px-8 bg-neutral-50/50">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs / Back button */}
           <div className="mb-6">

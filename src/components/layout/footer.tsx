@@ -3,6 +3,7 @@
 import Link from "next/link";
 import * as React from "react";
 import { Cookie } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -15,15 +16,19 @@ export function Footer() {
           {/* Column 1: Brand Info Description */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-custom-sm bg-brand-primary flex items-center justify-center text-white text-xs font-black">
-                G
-              </div>
-              <span className="font-display text-xl font-bold tracking-tight text-white">
-                GizmoGrid
-              </span>
+              <Image
+                src="/images/logo-light-text.png"
+                alt="Get Online Logo"
+                width={164}
+                height={119}
+                className="h-24 w-auto object-contain"
+              />
             </div>
             <p className="text-[13px] text-neutral-400 max-w-sm leading-relaxed">
               Engineered for high-performance. We provide premium tech accessories designed for professionals and tech enthusiasts.
+            </p>
+            <p className="text-[13px] text-neutral-400 max-w-sm leading-relaxed mt-2">
+              Questions? Email us at <a href="mailto:rehanmuhammad546@gmail.com" className="text-white hover:underline">rehanmuhammad546@gmail.com</a>
             </p>
           </div>
 
@@ -90,7 +95,7 @@ export function Footer() {
         <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 order-2 md:order-1 text-center md:text-left">
             <p className="text-[11px] text-neutral-500 tracking-wider">
-              &copy; {new Date().getFullYear()} GizmoGrid. High-performance hardware engineered for excellence.
+              &copy; {new Date().getFullYear()} Get Online. High-performance hardware engineered for excellence.
             </p>
             <div className="flex justify-center gap-4">
               <Link href="/policies/privacy" className="text-[11px] text-neutral-500 hover:text-white transition-colors">

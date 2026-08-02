@@ -19,8 +19,8 @@ const StoreSettingsSchema: Schema<IStoreSettings> = new Schema(
     freeShippingThreshold: { type: Number, default: 50 },
     vatRate: { type: Number, default: 0 },
     contactPhone: { type: String, default: "+92 300 1234567" },
-    contactEmail: { type: String, default: "support@gizmogrid.com" },
-    address: { type: String, default: "GizmoGrid HQ, Lahore, Pakistan" },
+    contactEmail: { type: String, default: "rehanmuhammad546@gmail.com" },
+    address: { type: String, default: "Get Online HQ, Lahore, Pakistan" },
   },
   { timestamps: true }
 );

@@ -107,7 +107,7 @@ export default async function ShopPage({ searchParams }: PageProps) {
       <Header />
       
       {/* Spacer to push content below the absolute header */}
-      <div className="h-28" />
+      <div className="h-[140px]" />
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 flex-grow w-full">
         {/* Header Breadcrumb Title */}
