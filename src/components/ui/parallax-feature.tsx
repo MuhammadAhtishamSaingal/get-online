@@ -41,7 +41,7 @@ export function ParallaxFeature({
     >
       {/* Background Image Container using CSS parallax background-attachment */}
       <div
-        className="absolute inset-0 w-full h-full bg-scroll lg:bg-fixed bg-center bg-no-repeat bg-cover transition-all duration-300 motion-reduce:bg-scroll"
+        className="absolute inset-0 w-full h-full bg-fixed bg-center bg-no-repeat bg-cover transition-all duration-300 motion-reduce:bg-scroll"
         style={{ backgroundImage: `url('${optimizedUrl}')` }}
       >
         {/* Dark overlay */}
