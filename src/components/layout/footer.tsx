@@ -15,15 +15,15 @@ export function Footer() {
           
           {/* Column 1: Brand Info Description */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 focus-visible:outline-none">
               <Image
                 src="/images/logo-light-text.png"
                 alt="Get Online Logo"
                 width={164}
                 height={119}
-                className="h-24 w-auto object-contain"
+                className="h-24 w-auto object-contain cursor-pointer"
               />
-            </div>
+            </Link>
             <p className="text-[13px] text-neutral-400 max-w-sm leading-relaxed">
               Engineered for high-performance. We provide premium tech accessories designed for professionals and tech enthusiasts.
             </p>

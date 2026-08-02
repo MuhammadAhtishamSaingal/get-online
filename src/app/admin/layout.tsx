@@ -89,13 +89,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:flex-shrink-0 bg-neutral-900 text-white border-r border-neutral-800">
         {/* Sidebar Brand Header */}
         <div className="h-16 px-6 border-b border-neutral-800 flex items-center justify-between">
-          <Link href="/admin/dashboard" className="flex items-center gap-2 focus-visible:outline-none">
+          <Link href="/" className="flex items-center gap-2 focus-visible:outline-none">
             <Image
               src="/images/logo-light-text.png"
               alt="Get Online Logo"
               width={164}
               height={119}
-              className="h-9 w-auto object-contain"
+              className="h-9 w-auto object-contain cursor-pointer"
             />
             <span className="text-[10px] text-brand-primary font-bold uppercase tracking-wide bg-brand-primary/10 px-1.5 py-0.5 rounded-custom-md border border-brand-primary/20">Admin</span>
           </Link>
@@ -158,16 +158,16 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             </button>
 
             {/* Logo */}
-             <div className="h-16 px-6 border-b border-neutral-800 flex items-center">
+             <Link href="/" className="h-16 px-6 border-b border-neutral-800 flex items-center focus-visible:outline-none">
               <Image
                 src="/images/logo-light-text.png"
                 alt="Get Online Logo"
                 width={164}
                 height={119}
-                className="h-9 w-auto object-contain"
+                className="h-9 w-auto object-contain cursor-pointer"
               />
               <span className="text-[10px] text-brand-primary font-bold uppercase tracking-wide bg-brand-primary/10 px-1.5 py-0.5 rounded-custom-md border border-brand-primary/20 ml-2">Admin</span>
-            </div>
+            </Link>
 
             {/* Links */}
             <nav className="flex-1 px-4 py-6 space-y-1.5 overflow-y-auto">
